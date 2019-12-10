@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+    /* 탭버튼 */
+#movieTab{width: 100%; margin: 80px auto;}
+.tablist{font-size: 30px; font-weight: 700;}
+.tablist li{width: 50%; height: 88px; line-height: 88px; border-bottom: 2px solid #dddddd; color: #aaaaaa; background: #fff;}
+.tablist li:hover, .tablist li:focus, .tablist li.active{color: #ea651e; cursor: pointer;}
+.tablist li:after{content: ""; display: block; margin: 0 auto; width: 0; height: 2px; background: #ea651e;}
+.tablist li:hover:after, .tablist li:focus:after, .tablist li.active:after{width: 30%;}
+
+    /* 탭패널 */
+#movieTab .tabpanel{display: inline-block;}
+
+#tabpanel1 > div a{display: block; width: 180px; height: 40px; line-height: 36px; margin: 48px 0 38px 925px; color: #ea651e; border: 2px solid #ea651e; background: transparent url("../images/common/icon_plus.png") no-repeat 14px 50%;}
+#tabpanel1 > div a:hover, #tabpanel1 > div a:focus{color: #fff; background: #ea651e url("../images/common/icon_plus_hover.png") no-repeat 14px 50%;}
+
+#tabpanel1 ul li{width: 270px; height: 400px; color: #fff;}
+#tabpanel1 ul li + li{margin-left: 8px;}
+
+#tabpanel1 ul li div{height: 400px; padding-top: 111px; top: 0; left: 0px; background: rgba(0,0,0,0);}
+#tabpanel1 ul li div:hover, #tabpanel1 ul li div.on{background: rgba(0,0,0,0.6);}
+#tabpanel1 ul li div strong{display: block; font-size: 30px; font-weight: 500;}
+#tabpanel1 ul li div p{font-size: 13px; font-weight: 100;}
+#tabpanel1 ul li div a{display: inline-block; width: 180px; height: 40px; line-height: 36px; border: 2px solid #fff; font-weight: 100; font-size: 18px;}
+#tabpanel1 ul li div a:nth-child(3){margin-top: 57px;}
+#tabpanel1 ul li div a:hover, #tabpanel1 ul li div a:focus, #tabpanel1 ul li.on div a{color: #333; font-weight: 400; background: #fff;}
+#tabpanel1 ul li div a + a{margin-top: 15px;}
+
+#tabpanel1 ul li div strong, #tabpanel1 ul li div p, #tabpanel1 ul li div a{opacity: 0; -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)';}
+#tabpanel1 ul li:hover div strong, #tabpanel1 ul li:hover div p, #tabpanel1 ul li:hover div a, #tabpanel1 ul li.on div strong, #tabpanel1 ul li.on div p, #tabpanel1 ul li.on div a{opacity: 1; -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)';}
+
+    /* transition */
+.tablist li:hover, .tablist li:focus, .tablist li.active, #tabpanel1 ul li div, #tabpanel1 ul li div strong, #tabpanel1 ul li div p, #tabpanel1 ul li div a, .tablist li:after, #tabpanel1 > div a{-webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; transition: all 0.5s;}

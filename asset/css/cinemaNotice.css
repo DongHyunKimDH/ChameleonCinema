@@ -1,0 +1,321 @@
+@charset "utf-8";
+
+
+
+.bgPositionY
+{
+    background-position-y : -100px !important;
+}
+
+/* FAQ 시작 */
+#subpage_content
+{
+    padding-top : 106px;
+}
+#location_bar
+{
+    padding : 20px 0px 0px 20px;
+}
+#location_bar img
+{
+    vertical-align : middle;
+}
+#location_bar a:hover img,
+#location_bar a:focus img
+{
+    border-bottom : 1px solid #333;
+}
+#faq h2.txt_cen
+{
+    height : 80px;
+    line-height : 80px;
+    font-size : 30px;
+    padding : 80px 0px;
+}
+#faq #iconBox
+{
+    height : 240px;
+    margin-bottom : 148px;
+}
+#faq #iconBox li
+{
+    position : relative;
+    width : 240px;
+    float : left;
+    box-shadow: 0px 2px 6px 0 rgba(0, 0, 0, 0.15);
+}
+#faq #iconBox li a
+{
+    display : block;
+    width : 240px;
+    height : 240px;
+}
+#faq #iconBox li a .iconArea
+{
+    position : relative;
+    display : inline-block;
+    margin : 50px 70px 0px;
+    width : 100px;
+    height : 100px;
+    box-sizing : border-box;
+    background : url("../../asset/images/notice/notice_sp.png") no-repeat;
+}
+#faq #iconBox li:nth-child(1) a .iconArea
+{
+    background-position-x : 0px;
+    background-position-y : 0px;
+}
+#faq #iconBox li:nth-child(2) a .iconArea
+{
+    background-position-x : -100px;
+}
+#faq #iconBox li:nth-child(3) a .iconArea
+{
+    background-position-x : -200px;
+}
+#faq #iconBox li:nth-child(4) a .iconArea
+{
+    background-position-x : -300px;
+}
+#faq #iconBox li:nth-child(5) a .iconArea
+{
+    background-position-x : -400px;
+}
+
+#faq #iconBox li:nth-child(1):hover a .iconArea,
+#faq #iconBox li:nth-child(1) a:focus .iconArea
+{
+    background-position : 0px -100px;
+}
+#faq #iconBox li:nth-child(2):hover a .iconArea,
+#faq #iconBox li:nth-child(2) a:focus .iconArea
+{
+    background-position : -100px -100px;
+}
+#faq #iconBox li:nth-child(3):hover a .iconArea,
+#faq #iconBox li:nth-child(3) a:focus .iconArea
+{
+    background-position : -200px -100px;
+}
+#faq #iconBox li:nth-child(4):hover a .iconArea,
+#faq #iconBox li:nth-child(4) a:focus .iconArea
+{
+    background-position : -300px -100px;
+}
+#faq #iconBox li:nth-child(5):hover a .iconArea,
+#faq #iconBox li:nth-child(5) a:focus .iconArea
+{
+    background-position : -400px -100px;
+}
+#faq #iconBox li a p
+{
+    position : relative;
+    top : 40px;
+    font-size : 24px;
+}
+#faq #iconBox li:hover a p,
+#faq #iconBox li a:focus p
+{
+    color : #eb651e;
+}
+#searchWrap
+{
+    text-align: right;
+    padding : 0px 30px 37px 0px;
+    border-bottom : 1px solid #eee;
+}
+#searchSelect
+{
+    background : url("../images/notice/select.png") no-repeat 70px center;
+    margin-right : 20px;
+}
+#searchWrap button
+{
+    width : 25px;
+    height : 25px;
+    right :32px;
+    top : 1.5px;
+}
+
+
+#boardArea
+{
+    width : 1200px;
+}
+#boardHead
+{
+    height : 49px;
+    line-height : 49px;
+    border-bottom : 1px solid #eee;
+}
+.boardList
+{
+    width : 100%;
+}
+#boardArea .boardList > a
+{
+    display : block;
+    width : 1200px;
+    height : 49px;
+    border-bottom : 1px solid #eee;
+}
+#boardArea .boardList > a:hover .boardHead3,
+#boardArea .boardList > a:focus .boardHead3
+{
+    color : #eb651e;
+}
+#boardArea .boardList .detail
+{
+    height : 0px;
+    overflow : hidden;
+    padding-left : 390px;
+    transition : all 0.5s;
+    background : #eee;
+}
+#boardArea .boardList .detail.detailVisible
+{
+    height : auto;
+    padding : 50px 0px 50px 390px;
+}
+#boardArea .boardList a > span
+{
+    padding : 10px 0px;
+}
+#boardArea .boardHead1
+{
+    display : inline-block;
+    width : 130px;
+    text-align : center;
+}
+#boardArea .boardHead2
+{
+    display : inline-block;
+    width : 250px;
+}
+#boardArea .boardHead3
+{
+    display : inline-block;
+    width : 800px;
+}
+
+
+#buttonSet
+{
+    margin : 80px auto;
+    width : 500px;
+    height : 80px;
+}
+#buttonSet .pageButton
+{
+    float : left;
+    width : 50px;
+    height : 50px;
+    line-height : 50px;
+    font-size : 18px;
+    border : 1px solid #eee;
+    -webkit-box-sizing : border-box;
+    -moz-box-sizing : border-box;
+    box-sizing : border-box;
+}
+#buttonSet .pageButton+.pageButton
+{
+    margin-left : 15px;
+}
+#buttonSet .pageButton img
+{
+    vertical-align : middle;
+}
+#buttonSet .pageButton a
+{
+    display : block;
+    width : 50px;
+    height : 50px;
+}
+#buttonSet .pageButton a:hover,
+#buttonSet .pageButton a:focus
+{
+    color : #eb651e;
+}
+/* FAQ 종료 */
+
+/* question 시작 */
+.questionTxt
+{
+    font-size : 20px;
+    line-height : 60px;
+    margin-bottom : -40px;
+    padding-left : 42px;
+}
+.questionTxt p + p
+{
+    margin-bottom : 80px;
+}
+.questionTxt strong
+{
+    display : block;
+    font-weight : 500;
+    margin-bottom : 46px;
+}
+#agreementTxt
+{
+    width : 1198px;
+    height : 469px;
+    border : 1px solid #aaa;
+    margin-bottom : 30px;
+}
+#agreementTxt p
+{
+    font-size : 20px;
+    line-height : 30px;
+    letter-spacing : -0.4px;
+    padding : 49px 0px 43px 38px;
+}
+.questionTxt2
+{
+    font-size : 20px;
+    line-height : 30px;
+    padding-left : 42px;
+    margin-bottom : 100px;
+}
+.questionTxt2 #radioWrap
+{
+    right : 23px;
+    top : 0px;
+}
+
+
+#quesForm
+{
+    width : 1200px;
+    font-size : 20px;
+}
+#quesForm tr
+{
+    border-top : 1px solid #eee;
+    height : 50px;
+}
+.wid140
+{
+    width : 140px;
+}
+.wid410
+{
+    width : 410px;
+}
+.wid310
+{
+    width : 310px;
+}
+#quesForm input[type="text"]
+{
+    background : #f1f1f1;
+}
+#quesForm #name
+{
+    width : 130px;
+}
+#quesForm #quesTel + td > input[type="text"]
+{
+    width : 60px;
+}
+/* question 종료 */
