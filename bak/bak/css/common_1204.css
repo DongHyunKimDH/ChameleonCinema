@@ -1,0 +1,243 @@
+@charset "utf-8";
+@font-face
+{
+    font-family : "NotoSans";
+    font-weight : 100; 
+    src : url("../fonts/NotoSansKR-Light.eot"); 
+    src : local("※"),
+    url("../fonts/NotoSansKR-Light.woff2") format("woff2"),
+    url("../fonts/NotoSansKR-Light.woff") format("woff"),
+    url("../fonts/NotoSansKR-Light.otf") format("opentype");
+}
+@font-face
+{
+    font-family : "NotoSans";
+    font-weight : 300; 
+    src : url("../fonts/NotoSansKR-DemiLight.eot"); 
+    src : local("※"),
+    url("../fonts/NotoSansKR-DemiLight.woff2") format("woff2"),
+    url("../fonts/NotoSansKR-DemiLight.woff") format("woff"),
+    url("../fonts/NotoSansKR-DemiLight.otf") format("opentype");
+}
+@font-face
+{
+    font-family : "NotoSans";
+    font-weight : 400; 
+    src : url("../fonts/NotoSansKR-Regular.eot"); 
+    src : local("※"),
+    url("../fonts/NotoSansKR-Regular.woff2") format("woff2"),
+    url("../fonts/NotoSansKR-Regular.woff") format("woff"),
+    url("../fonts/NotoSansKR-Regular.otf") format("opentype");
+}
+@font-face
+{
+    font-family : "NotoSans";
+    font-weight : 500; 
+    src : url("../fonts/NotoSansKR-Medium.eot"); 
+    src : local("※"),
+    url("../fonts/NotoSansKR-Medium.woff2") format("woff2"),
+    url("../fonts/NotoSansKR-Medium.woff") format("woff"),
+    url("../fonts/NotoSansKR-Medium.otf") format("opentype");
+}
+@font-face
+{
+    font-family : "NotoSans";
+    font-weight : 700; 
+    src : url("../fonts/NotoSansKR-Bold.eot"); 
+    src : local("※"),
+    url("../fonts/NotoSansKR-Bold.woff2") format("woff2"),
+    url("../fonts/NotoSansKR-Bold.woff") format("woff"),
+    url("../fonts/NotoSansKR-Bold.otf") format("opentype");
+}
+@font-face
+{
+    font-family : "Josefin";
+    font-weight : 400; 
+    src : url("../fonts/JosefinSans-Regular.eot"); 
+    src : local("※"),
+    url("../fonts/JosefinSans-Regular.woff") format("woff"),
+    url("../fonts/JosefinSans-Regular.ttf") format("truetype");
+}
+@font-face
+{
+    font-family : "Josefin";
+    font-weight : 700; 
+    src : url("../fonts/JosefinSans-Bold.eot"); 
+    src : local("※"),
+    url("../fonts/JosefinSans-Bold.woff") format("woff"),
+    url("../fonts/JosefinSans-Bold.ttf") format("truetype");
+}
+
+body, ul, h1, h2, h3, h4, h5, h6, p{margin : 0px; padding : 0px;}
+h1, h2, h3, h4, h5, h6{font-size : inherit; font-weight : inherit;}
+ul{list-style : none;}
+a:link, a:visited, a:hover, a:active{color : inherit; text-decoration : none; border : none;}
+img{vertical-align: top; border : none;}
+h1, h2, h3, h4, h5, h6{font-size : inherit;}
+header, article, section, footer, nav{display : block;}
+#gnb li{float : left;}
+address{font-style : normal;}
+
+
+.fl_left{float : left;}
+.fl_right{float : right;}
+.po_absol{position : absolute;}
+.po_relat{position : relative;}
+.cle_both:after{content : ""; display : block; clear : both;}
+.txt_cen{text-align : center;}
+.hide{font-size : 0px; line-height : 0px; width : 1px; height : 1px; overflow : hidden; position : absolute; left : -9999px; top : 0px; text-indent : -9999px;}
+
+
+body
+{
+    font-family : "NotoSans";
+    font-weight: 400;
+    color : #555;
+}
+.wid1920
+{
+    width : 100%;
+}
+
+
+#skip a
+{
+    position : absolute;
+    left : -9999px; top : 0px;
+    z-index : 1000;
+}
+#skip a:focus
+{
+    width : 100%;
+    height : 50px;
+    background : #aaa;
+    text-align : center;
+    line-height : 50px;
+    left : 0px;
+}
+#header
+{
+    position: fixed;
+    left : 0px;
+    top : 0px;
+    z-index: 100;
+    width: 100%;
+    height: 106px;
+    border-bottom : 1px solid #aaa;
+    background : #fff;
+}
+#header_wrap
+{
+    position : relative;
+    width : 1200px;
+    height : 106px;
+    margin : 0px auto;
+}
+/* logo.img 164x29 */
+.logo
+{
+    width : 164px;
+    height : 29px;
+    /* left: 0px;
+    top : 39.5px; */
+    margin-top : 39.5px;
+    
+}
+.logo a
+{
+    display : inline-block;
+    width : 164px;
+    height : 29px;
+}
+#gnb
+{
+    height : 106px;
+    line-height : 104px;
+    font-size : 18px;
+}
+#gnb > ul
+{
+    display : inline-block;
+    position : relative;
+    width : 450px;
+}
+#gnb > ul > li
+{
+    width : 50px;
+    box-sizing : border-box;
+}
+#gnb > ul .all_Menu img
+{
+    vertical-align : middle;
+}
+#gnb > ul > li+li
+{
+    margin-left : 50px;
+}
+#gnb ul li a
+{
+    display : block;
+}
+
+#header_btn ul
+{
+    /* display : none; */
+}
+#header_btn ul li
+{
+    font-size : 12px;
+    padding : 5px 20px;
+}
+
+.contain
+{
+    width : 1200px;
+    margin : 0px auto;
+}
+
+#footer
+{
+    position : relative;
+    width : 100%;
+    height : 200px;
+    font-size : 12px;
+    border-top : 1px solid #aaa;
+    
+}
+#footer .logo
+{
+    margin-bottom : 20px;
+}
+#footer > ul
+{
+    margin-bottom : 10px;
+}
+#footer ul li
+{
+    float :left;
+    padding-bottom : 20px;
+    border-bottom : 1px solid #aaa;
+}
+#footer ul li + li
+{
+    padding-left : 10px;
+}
+#footer ul li + li:before
+{
+    content : "";
+    border-left : 1px solid #777;
+    padding-left : 10px;
+}
+#footer .footer_txt
+{
+    text-align : right;
+    position : absolute;
+    right : 0px;
+    top : 50px;
+}
+#footer .footer_txt strong
+{
+    font-size : 20px;
+    display : block;
+    margin-bottom : 30px;
+}

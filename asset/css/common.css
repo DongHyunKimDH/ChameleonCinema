@@ -176,7 +176,7 @@ body
 }
 #sitemap.siteTop
 {
-    top : -34px;
+    top : -34.5px;
 }
 .logo
 {
@@ -254,7 +254,7 @@ body
 }
 /*sitemap start */
 #sitemap {width: 1200px; height: 0; background: #ffffff; margin: 0 auto; -webkit-box-shadow: 0px 5px 5px #00000020; -moz-box-shadow: 0px 5px 5px #00000020; box-shadow: 0px 5px 5px #00000020; z-index: 750; overflow: hidden; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; transition: all 0.5s;}
-#sitemap.site_show{height: 400px; border-top : 1px solid #333;}
+#sitemap.site_show{height: 400px; border-top : 1px solid #aaa;}
 #sitemap .sitemap_box {width: 1000px; height: 380px;margin: 0 auto;position: relative;}
 #sitemap .sitemap_box .s_tit {float: left;}
 #sitemap .sitemap_box .s_tit{margin-top: 25px; margin-bottom: 25px;}

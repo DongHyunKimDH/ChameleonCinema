@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>카멜레온시네마</title>
+
+    <link rel="stylesheet" href="asset/css/fullpage.css">
+    <link rel="stylesheet" href="asset/css/common.css">
+    <link rel="stylesheet" href="asset/css/index.css">
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+    <script src="asset/js/jquery-1.12.4.min.js"></script>
+    <script src="asset/js/fullpage.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#contain").fullpage({
+                sectionsColor: ['red', 'green', 'blue', 'gray', 'aqua', '#070'],
+                navigation: true
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="skip">
+        <a href="#gnb">주메뉴 바로가기</a>
+        <a href="#content2">본문바로가기</a>
+    </div>
+    <div id="wrap">
+        <header id="header">
+            <div id="header_wrap">
+                <h1 class="logo fl_left">
+                    <a href="index.html">
+                        <img src="asset/images/common/logo.png" alt="카멜레온시네마 로고">
+                    </a>
+                </h1>
+                <div id="header_btn">
+                    <ul class="fl_right">
+                        <li class="fl_left"><a href="">로그인</a></li>
+                        <li class="fl_left"><a href="">회원가입</a></li>
+                        <li class="fl_left"><a href="">멤버십</a></li>
+                        <li class="fl_left"><a href="">고객센터</a></li>
+                    </ul>
+                </div>
+                <nav id="gnb" class="txt_cen cle_both:after">
+                    <ul>
+                        <li><a href="reserve/r_quick.html">예매</a></li>
+                        <li><a href="movie/recently.html">영화</a></li>
+                        <li><a href="cinema/c_finder.html">영화관</a></li>
+                        <li><a href="">이벤트</a></li>
+                        <li class="all_Menu"><a href=""><img src="asset/images/common/icon_menu.gif" alt="전체메뉴보기"></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div id="contain">
+            <section class="section" id="content1">
+                cnt1
+            </section>
+            <section class="section" id="content2">
+                cnt2
+            </section>
+            <section class="section" id="content3">
+                cnt3
+            </section>
+            <section class="section" id="content4">
+                cnt4
+            </section>
+            <div class="section fp-auto-height">
+                <footer id="footer">
+                    <h1 class="logo">
+                        <a href="">
+                            <img src="asset/images/common/logo_footer.png" alt="카멜레온시네마 로고">
+                        </a>
+                    </h1>
+                    <address>
+                        ddd
+                    </address>
+                </footer>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -11,14 +11,16 @@
 #sub_m_tit ul li a:focus{color: #eb651e; padding-bottom: 18px; border-bottom: 2px solid #eb651e;}
 
 /* movie */
-#mv_list{width: 100%; padding-top: 300px; height: 41px; line-height: 41px;}
+#subpage_content #mv_two{padding-top: 1023px; padding-bottom: 130px;}
+#mv_list{width: 100%; height: 41px; line-height: 41px;}
 #mv_list h3, #mv_list a{position: absolute; float: left;}
 #mv_list h3{top: 0; left: 541px;}
-#mv_list a{position: absolute; display: block; width: 180px; top: 0; right: 0; border: 2px solid #eb651e;}
-#mv_list h3, #mv_steel h3{font-size: 20px; font-weight: 700;}
+#mv_list a{position: absolute; display: block; width: 180px; height: 44px; top: 0; right: 0; color: #eb651e; border: 2px solid #eb651e; background: transparent url("../images/common/icon_plus.png") no-repeat 14px 50%;}
+#mv_list a:hover, #mv_list a:focus{color: #fff; background: #ea651e url("../images/common/icon_plus_hover.png") no-repeat 14px 50%;}
+#mv_list h3, .mv_steel h3{font-size: 20px; font-weight: 700;}
 
-.tablist{width: 1200px; height: 160px;}
-.tablist li{float: left; position: relative; color: #fff;}
+.tablist{width: 1200px; height: 160px; margin-top: 18px;}
+.tablist li{float: left; position: relative; color: #fff; cursor: pointer;}
 .tablist li + li{margin-left: 21px;}
 .tablist li:last-child{margin-left: 22px;}
 .tablist li div{position: absolute; width: 284px; height: 160px; top: 0; left: 0; background: rgba(0,0,0,0);}
@@ -26,17 +28,38 @@
 .tablist li div strong{display: block; padding-top: 47px; font-size: 28px; font-weight: 500;}
 .tablist li div p{font-size: 16px; font-weight: 100;}
 
+#subpage_content #mv_one{top: 346px; left: 0;}
+.tabpanel > img{display: inline-block; padding-left: 100px;}
+.tabpanel .mv_maintxt{display: inline-block; width: 610px; margin-left: 80px;}
 .tabpanel .mv_maintxt .mv_popu{color: #eb651e; font-size: 20px;}
 .tabpanel .mv_maintxt span{font-weight: 500;}
 .tabpanel .mv_maintxt h4{font-size: 36px; font-weight: 700;}
 .tabpanel .mv_maintxt .mv_italic{font-style: italic;}
 .tabpanel .mv_maintxt strong, .tabpanel .mv_maintxt p{margin-top: 22px;}
-.tabpanel .mv_efc{float: right;}
-.tabpanel .mv_efc a{display: inline-block; color: #eb651e; font-size: 14px; font-weight: 500; border: 2px solid #eb651e; padding: 5px 16px;}
+.tabpanel .mv_efc{float: right; top: 380px; right: 0;}
+.tabpanel .mv_efc a{display: inline-block; color: #eb651e; font-size: 14px; border: 2px solid #eb651e; padding: 5px 16px;}
 .tabpanel .mv_efc a + a{margin-left: 10px;}
 .tabpanel .mv_efc a:hover, .tabpanel .mv_efc a:focus{color: #fff; background: #eb651e;}
+
+.tabpanel .mv_steel{display: inline-block; width: 632px; height: 155px; top: 425px; left: 566px; padding-left: 22px;}
+.tabpanel .mv_steel h3{padding-bottom: 10px;}
+.tabpanel .mv_steel div{width: 632px; height: 116px; overflow: hidden;}
+.tabpanel .mv_steel div ul li{float: left;}
+.tabpanel .mv_steel div ul li + li{margin-left: 10px;}
+
+    /* movie slider */
+.tabpanel .mv_steel .media_slider .bx-controls .bx-controls-direction a, #content1 .bx-controls .bx-controls-auto, #content1 .bx-controls .bx-pager{position: absolute; z-index: 100; text-indent: -9999px;}
+.tabpanel .mv_steel .media_slider .bx-controls .bx-controls-direction a{top: 438px; width: 50px; height: 80px;}
+.tabpanel .mv_steel .media_slider .bx-controls .bx-controls-direction .bx-prev{left: 0px; background: url("../images/common/icon_big_left.png") no-repeat;}
+.tabpanel .mv_steel .media_slider .bx-controls .bx-controls-direction .bx-next{right: 0px; background: url("../images/common/icon_big_right.png") no-repeat;}
+
+#subpage_content #mv_one .tabpanel{display: none;}
+#subpage_content #mv_one .tabpanel.active{display: block;}
+
+#subpage_content #mv_three a{display: inline-block;}
+#subpage_content #mv_three a + a{margin: 30px 0 100px;}
 
 /* movie opacity, transition */
 .tablist .tab div strong, .tablist .tab div p{-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'; opacity: 0;}
 .tablist .tab div:hover, .tablist .tab div.on, .tablist .tab div:hover strong, .tablist .tab div:hover p, .tablist .tab div.on strong, .tablist .tab div.on p{-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)'; opacity: 1;}
-#sub_m_tit ul li, .tablist .tab div, .tablist .tab div.active, .tablist .tab div strong, .tablist .tab div p, .tabpanel .mv_efc a{-webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; transition: all 0.5s;}
+#sub_m_tit ul li, #mv_list a, .tablist .tab div, .tablist .tab div.active, .tablist .tab div strong, .tablist .tab div p, .tabpanel .mv_efc a{-webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; transition: all 0.5s;}

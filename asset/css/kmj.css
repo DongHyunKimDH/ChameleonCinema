@@ -7,12 +7,14 @@
 #sub_m_tit ul li{border-bottom: 2px solid #aaa;}
 #sub_m_tit ul li:hover ,#sub_m_tit .r_quick li:hover{color: #eb651e; border-bottom: 2px solid #eb651e;}
 #sub_m_tit ul li a:focus,#sub_m_tit .r_quick li a:focus{color: #eb651e; padding-bottom: 18px; border-bottom: 2px solid #eb651e;}
-#footer { position: absolute;top: 1400px;}
+.r_footer{ position: absolute;top: 1100px;}
+.ms_footer{position: absolute; top: 1400px;}
 #sub_m_tit .sub_select {color: #eb651e;border-color: #eb651e;}
 #sub_m_tit .r_quick li{float: left; width: 33.3333%; height: 70px; line-height: 68px; font-size: 25px;}
 #sub_m_tit .r_quick li+li{ color: #aaa;}
-#sub_m_tit ul li,.featherlight-content .md a,#ms_box ul li, #ms_box .ms_h_txt.on {-webkit-transition: all 0.5s;-moz-transition: all 0.5s;-o-transition: all 0.5s;transition: all 0.5s;}
+#sub_m_tit ul li,.featherlight-content .md a,#ms_box ul li, #ms_box .ms_h_txt.on ,#reserve_quick .r_poster_box ul li div,#reserve_quick .r_poster_box  ul li div a,#reserve_quick .r_poster_box .r_left,#reserve_quick .r_poster_box .r_right {-webkit-transition: all 0.5s;-moz-transition: all 0.5s;-o-transition: all 0.5s;transition: all 0.5s;}
 #sub_m_tit .r_quick.sub_select {color: #eb651e;border-color: #eb651e;}
+#ms_box ul li ,#reserve_quick .r_poster_box ul li div {box-shadow: 0px 0px 10px rgba(0,0,0,0.12);}
 
 /* membership */
 #m_ship{ top: 300px;width: 1200px; height: 1100px;}
@@ -22,7 +24,6 @@
 #ms_box>ul>li{margin-right: 50px;margin-bottom: 70px; width: 550px; height: 320px; float: left; }
 #ms_box>ul>li:nth-child(1){margin: none;}
 #ms_box img {z-index: -100;}
-#ms_box ul li {box-shadow: 0px 0px 10px rgba(0,0,0,0.12);}
 #ms_box ul li:nth-child(1) {background:url("../../asset/images/membership/teener.jpg") no-repeat;}
 #ms_box ul li:nth-child(2) {background:url("../../asset/images/membership/couple.jpg") no-repeat;}
 #ms_box ul li:nth-child(3) {background:url("../../asset/images/membership/kinder.jpg") no-repeat;}
@@ -36,18 +37,14 @@
 #ms_box .ms_h_txt .link { position: absolute; top: 243.5px; left: 185px;width: 180px; height: 40px; line-height: 40px;font-size: 16px;border: 2px solid #fff; background:url("../../asset/images/common/icon_plus_hover.png") no-repeat 19.2px 50%;}
 #ms_box .ms_h_txt .link:hover,#ms_box .ms_h_txt .link:focus{ color: #000; background:#ffffff
     url("../../asset/images/common/icon_plus_hover_black.png") no-repeat 19.2px 50%;}
-#ms_box .ms_h_txt h5 ,#ms_box .ms_h_txt strong ,#ms_box .ms_h_txt strong:after, #ms_box .ms_h_txt p , #ms_box .ms_h_txt a { opacity: 0; -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)';}
-
-#ms_box .ms_h_txt:hover h5  ,#ms_box .ms_h_txt.on h5,#ms_box .ms_h_txt:hover strong ,#ms_box .ms_h_txt.on strong,#ms_box .ms_h_txt:hover strong:after,#ms_box .ms_h_txt.on strong:after, #ms_box .ms_h_txt:hover p,#ms_box .ms_h_txt.on p , #ms_box .ms_h_txt:hover a,#ms_box .ms_h_txt.on a { opacity: 1; -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)';}
-
+#ms_box .ms_h_txt{ opacity: 0; -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)';}
+#ms_box .ms_h_txt:hover , #ms_box .ms_h_txt.on ,#ms_box .ms_h_txt:focus{ opacity: 1; -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)';}
 #ms_notice { color: #999999; line-height: 35px;}
 
 /* membership modal */
 .md {display: none;}
-.featherlight .featherlight-content {width: 700px; height: 1000px; margin: 0;padding: 0;}
-
-.featherlight .featherlight-close-icon {top: 50px; right: 50px;width: 22px;line-height: 22px; font-size: 35px; color: #ffffff;background:none;}
-
+.featherlight .featherlight-content{width: 700px; height: 1000px; margin: 0;padding: 0;overflow: hidden;}
+.featherlight .featherlight-close-icon{top: 50px; right: 50px;width: 22px;line-height: 22px; font-size: 35px; color: #ffffff;background:none;}
 .featherlight-content .md { position: relative;text-align: center; margin: 0;padding: 0;}
 .featherlight-content .md p{ padding-top: 70px;padding-bottom: 10px;left: -10px;}
 .featherlight-content .md strong { font-family:Josefin; font-weight: 700; font-size: 35px; color: #eb651e;}
@@ -59,7 +56,25 @@
 /* membership end */
 
 /* reserve quick */
-#r_movieposter{ top: 300px; width: 1200px; height: 1200px; background: pink;}
+#reserve_quick {width: 1200px; height: 900px;top: 260px;}
+#reserve_quick .r_select {height: 100px;margin-bottom: 110px;background: pink;}
+#reserve_quick .r_poster_box ul li {width: 270px; height: 400px; color: #ffffff;}
+#reserve_quick .r_poster_box ul li + li { margin-left: 40px;}
+#reserve_quick .r_poster_box ul li div {height: 400px; padding-top: 111px; top: 0; left: 0px; background: rgba(0,0,0,0);text-align: center;z-index: 400;}
+#reserve_quick .r_poster_box ul li div:hover , #reserve_quick .r_poster_box ul li div.on {background: rgba(0,0,0,.6);}
+#reserve_quick .r_poster_box  ul li div strong{display: block; font-size: 30px; font-weight: 500;}
+#reserve_quick .r_poster_box  ul li div p{font-size: 13px; font-weight: 100;margin-bottom: 57px;}
+#reserve_quick .r_poster_box  ul li div a{display: inline-block; width: 180px; height: 40px; line-height: 36px; border: 2px solid #fff; font-weight: 100; font-size: 18px;}
+#reserve_quick .r_poster_box  ul li div a:hover , #reserve_quick .r_poster_box  ul li div a:focus { background: #ffffff; color: #333333; font-weight: 500;}
+#reserve_quick .r_poster_box  ul li div a + a {margin-top: 14.4px; }
+#reserve_quick .r_poster_box  ul li div { opacity: 0;-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';}
+#reserve_quick .r_poster_box  ul li:hover div { opacity: 1;-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)';}
+#reserve_quick .r_poster_box ul li ul li {width: 55px; height: 55px;}
+#reserve_quick .r_poster_box .r_left{top: 700px;left: 0;width: 52px;height: 52px; background:url("../images/reserve/btn_prev_round.gif") no-repeat;}
+#reserve_quick .r_poster_box .r_left:hover {top: 700px;left: 0;width: 51px;height: 51px; background:url("../images/reserve/btn_prev_round_hover.png") no-repeat;}
+#reserve_quick .r_poster_box .r_right{top: 700px;right: 1px;width: 52px;height: 52px; background:url("../images/reserve/btn_next_round.gif") no-repeat;}
+#reserve_quick .r_poster_box .r_right:hover{top: 700px;right: 0;width: 51px;height: 51px; background:url("../images/reserve/btn_next_round_hover.png") no-repeat;}
 
-
+/* modal */
+.r_md{ display: none;}
 

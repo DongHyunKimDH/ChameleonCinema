@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+img{vertical-align: top;} 
+ul{padding: 0;margin: 0;}
+
+/* content 4 */
+#content4{ width: 1200px; height: 930px;}
+#con4_wrap { position: absolute;width: 1200px; height: 600px; margin: 0 auto;  text-align: center; margin-top: 130px;}
+#con4_wrap .con4_tit h3 { font-weight: 700; color: #333333; font-size: 30px;}
+#con4_wrap .con4_tit h3:after { content: ""; border-bottom: 3px solid #ea651e; position: absolute; top: 50px; left: 50%; margin-left: -100px; width: 200px;}
+
+#con4_wrap ul { padding-top: 149px; height: 229px;}
+#con4_wrap ul li{ position: relative; display: inline-block; float: left; width: 370px; height: 228px;}
+
+#con4_wrap ul li:nth-child(1) {background: url("../../asset/images/main/Card_1.png") no-repeat;}
+#con4_wrap ul li:nth-child(2) {background: url("../../asset/images/main/Card_2.png") no-repeat;}
+#con4_wrap ul li:nth-child(3) {background: url("../../asset/images/main/Card_3.png") no-repeat;}
+#con4_wrap ul li + li{margin-left: 45px;}
+
+#con4_wrap>span { position: absolute; top: 525px;left: 0; text-align: left; color: #555555; line-height: 30px;}
+#con4_wrap>a{ position: absolute;top: 548px;right: 0; width: 180px; height: 40px;border: 2px solid #ea651e; padding:4px 0px 0px 20px;box-sizing: border-box; background: url("../../asset/images/common/icon_plus.png") no-repeat 19px 9px; color: #ea651e; font-size: 16px;transition: all 0.5s;}
+#con4_wrap>a:hover , #con4_wrap>a:focus { background: #ea651e url("../../asset/images/common/icon_plus_hover.png")no-repeat 19px 9px; color: #ffffff;}
+
+
+
+/* .over */
+#con4_wrap .overbox { width: 370px; height: 228px;  background: rgba(0,0,0,0.0); border-radius: 20px;}
+#con4_wrap .over {position: absolute;top: 25%; left: 15%; width: 255px; height: 87px;text-align: center;color: #ffffff;}
+
+#con4_wrap .over span{ display:block; font-size: 14px; font-weight: 600; float: left;}
+#con4_wrap .over strong{ display:block;font-size: 25px; font-weight: 600;float: left;height: 40px; width: 255px;}
+#con4_wrap .over p{display:block;font-size: 10px; font-weight: 500; float: right; text-align: right;margin-top: 10px;}
+
+#con4_wrap .overbox:hover , #con4_wrap .overbox.on { background: rgba(0,0,0,0.6);transition: all 0.5s; }
+#con4_wrap .over span , #con4_wrap .over strong ,#con4_wrap .over p{opacity: 0; transition: all 0.5s;}
+#con4_wrap .overbox:hover span , #con4_wrap .overbox:hover strong ,#con4_wrap .overbox:hover p,#con4_wrap .overbox.on span , #con4_wrap .overbox.on strong ,#con4_wrap .overbox.on p { opacity: 1; transition: all 0.5s;}

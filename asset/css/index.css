@@ -37,7 +37,7 @@ div.wid1920.cnt1wrap
     /* 탭버튼 */
 #movieTab{width: 100%; margin: 80px auto;}
 .tablist{font-size: 30px; font-weight: 700;}
-.tablist li{width: 50%; height: 88px; line-height: 88px; border-bottom: 2px solid #dddddd; color: #aaaaaa; background: #fff;}
+.tablist li{width: 50%; height: 88px; line-height: 88px; border-bottom: 2px solid #dddddd; color: #aaaaaa; background: #fff; cursor: pointer;}
 .tablist li:hover, .tablist li:focus, .tablist li.active{color: #ea651e; cursor: pointer;}
 .tablist li:after{content: ""; display: block; margin: 0 auto; width: 0; height: 2px; background: #ea651e;}
 .tablist li:hover:after, .tablist li:focus:after, .tablist li.active:after{width: 30%;}

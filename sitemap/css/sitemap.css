@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+body, ul, h1, h2, h3{margin : 0px; padding : 0px;}
+ul{list-style : none;}
+h1, h2, h3{font-size : inherit; font-weight : inherit;}
+a{color : inherit; text-decoration : none;}
+body{font-family: "noto sans cjk kr";}
+
+header, nav, section, article, footer{display : block;}
+
+#header{height : 150px; text-align : center; width : 100%;}
+
+#gnb li{float : left; padding : 50px;}
+
+#wrap{width : 1080px; margin : 50px auto; background-color : #ddd;}
+#wrap > h2{padding-left : 110px; font-weight : 600; font-size : 200%;}
+
+#wrap #first_col, #second_col, #third_col, #fourth_col{width : 229px; background-color : pink; padding-left : 40px; border-right : 1px solid #aaa;float : left; color : #333;}
+#wrap .sub_tit{color : #111; font-weight : bold; font-size : 130%; padding-top : 20px; margin-bottom : 15px;}
+
+/* #second_col ul:after{content : ""; display : block; clear : both;} */
+
+#wrap .content li{margin-top : 5px; text-indent : 10px;}
+#info ul:after{content : ""; display : block; clear : both;}

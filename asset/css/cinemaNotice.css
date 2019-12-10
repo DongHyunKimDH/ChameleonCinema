@@ -288,6 +288,7 @@
 {
     width : 1200px;
     font-size : 20px;
+    
 }
 #quesForm tr
 {
@@ -310,6 +311,12 @@
 {
     background : #f1f1f1;
 }
+#quesForm button
+{
+    font-family : inherit;
+    font-size : 20px;
+    font-weight : 500;
+}
 #quesForm #name
 {
     width : 130px;
@@ -317,5 +324,46 @@
 #quesForm #quesTel + td > input[type="text"]
 {
     width : 60px;
+}
+#quesForm #etc + label
+{
+    margin-right : 200px;
+}
+#quesForm .selAreaWrap
+{
+    display : inline-block;
+}
+#quesForm .selAreaWrap:last-child
+{
+    margin-left : 50px;
+}
+#quesForm .selAreaWrap > button
+{
+    width : 140px;
+    height : 40px;
+    line-height : 38px;
+    border : 1px solid #333;
+    border-radius : 8px;
+    background : pink;
+    padding-left : 12px;
+    text-align : left;
+}
+
+#quesForm .selAreaWrap .selArea
+{
+    display : none;
+}
+#quesForm .selAreaWrap li
+{
+    padding-left : 20px;
+    background : #fff;
+    border-bottom : 1px solid #eee;
+    width : 140px;
+    height : 40px;
+    line-height : 38px;
+}
+#quesForm .selAreaWrap .selCinema
+{
+    
 }
 /* question 종료 */
