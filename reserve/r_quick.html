@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <title>빠른예매 : 예매 : 카멜레온시네마</title>
     <link rel="stylesheet" href="../asset/css/common.css">
-    <link rel="stylesheet" href="../asset/css/kmj.css">
     <link rel="stylesheet" href="css/featherlight.min.css">
+    <link rel="stylesheet" href="../asset/css/kmj.css">
     <link rel="icon" href="../asset/images/common/chamelieon.ico">
     <!--[if lt IE 9]>
         <script src="js/html5shiv.min.js"></script>
@@ -16,11 +16,8 @@
     <script src="../asset/js/tab.js"></script>
     <script src="../asset/js/common.js"></script>
     <script src="../asset/js/featherlight.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('.modal2').featherlight();
-        });
-    </script>
+    <script src="../asset/js/sub.js"></script>
+
 </head>
 
 <body>
@@ -98,7 +95,7 @@
                 <ul class="b_tit">
                     <li><a href="">멤버십</a>
                         <ul>
-                            <li><a href="../ms_guide.html">멤버십 안내</a></li>
+                            <li><a href="../membership/ms_guide.html">멤버십 안내</a></li>
                             <li><a href="">멤버십 카드</a></li>
                             <li><a href="">제휴카드</a></li>
                             <li><a href="">VIP</a></li>
@@ -136,7 +133,7 @@
         </div>
     </header>
 
-    <section id="subpage_content" class="wid1920 contain po_relat">
+    <section id="content" class="wid1920 contain po_relat">
         <div id="sub_m_tit" class="po_absol txt_cen boder_bx">
             <h2>예매</h2>
             <ul class="r_quick">
@@ -146,7 +143,69 @@
             </ul>
         </div>
         <div id="reserve_quick" class="po_absol">
-            <div class="r_select">
+            <div class="r_select po_relat">
+                <div class="r_cinema po_absol">
+                    <a href="">카멜레온 강남점</a>
+                     <div class="r_c">
+                         <div class="r_c_top">
+                             <p class="r_c_tit">CHAMELEON CINEMA</p>
+                             <ul class="r_c_mode">
+                                 <li>
+                                     <p href="">추천</p>
+                                 </li>
+                                 <li>
+                                     <p href="">전체</p>
+                                 </li>
+                             </ul>
+                             <p class="r_c_subtit">최근 이용한 카멜레온</p>
+                             <ul>
+                                 <li><a href="" type="button">카멜레온 강남</a></li>
+                                 <li><a href="" type="button">카멜레온 서초</a></li>
+                                 <li><a href="" type="button">카멜레온 홍대입구</a></li>
+                             </ul>
+                         </div>
+                         <div class="r_c_buttom">
+                                <p class="r_c_subtit">주변 카멜레온</p>
+                                <ul>
+                                    <li><a href="" type="button">카멜레온 서울대입구</a></li>
+                                    <li><a href="" type="button">카멜레온 사당</a></li>
+                                    <li><a href="" type="button">카멜레온 서초</a></li>
+                                    <li><a href="" type="button">카멜레온 강남</a></li>
+                                </ul>
+                            </div>
+                            <svg class="r_arrow po_absol" width="12" height="6">
+                                    <path d="M0 0 L12 0 L6 6 Z" />
+                            </svg>
+                     </div>
+                </div>
+                <div class="r_number po_absol">
+                    <a href="">2명</a>
+                    <ul>
+                        <li><a href="">1</a></li>
+                        <li><a href="" class="r_selected">2</a></li>
+                        <li><a href="">3</a></li>
+                        <li><a href="">4</a></li>
+                        <li><a href="">5</a></li>
+                        <li><a href="">6</a></li>
+                    </ul>
+                    <svg class="r_arrow po_absol" width="12" height="6">
+                            <path d="M0 0 L12 0 L6 6 Z" />
+                    </svg>
+                </div>
+                <div class="r_date po_absol">
+                    <a href="">12/10</a>
+                    <ul>
+                        <li><a href="" class="r_selected">12/10</a></li>
+                        <li><a href="">12/11</a></li>
+                        <li><a href="">12/12</a></li>
+                        <li><a href="">12/13</a></li>
+                        <li><a href="">12/14</a></li>
+                        <li><a href="">12/15</a></li>
+                    </ul>
+                    <svg class="r_arrow po_absol" width="12" height="6">
+                            <path d="M0 0 L12 0 L6 6 Z" />
+                    </svg>
+                </div>
             </div>
             <div class="r_poster_box">
                 <ul>
@@ -165,11 +224,74 @@
                             <strong>겨울왕국 2</strong>
                             <p>전체연령가</p>
                             <a href=".r_mdcnt2" class="link modal2" role="button">예매하기</a>
-                            <a href="" class="" >상세보기</a>
+                            <a href="" class="">상세보기</a>
                         </div>
 
-                        <div class="r_mdcnt2 r_md">
+                        <div class="r_mdcnt2 r_md fl_left">
+                            <img src="../asset/images/reserve/movie_age.gif" alt="">
                             <img src="../asset/images/reserve/frozen_poster_modal.jpg" alt="">
+                            <h6>상영시간표</h6>
+                            <ul>
+                                <li>
+                                    <div class="r_ticket">
+                                            <div class="r_t_top po_relat">
+                                                <p class="r_t_top fl_left">2D</p>
+                                                <p class="r_t_top fl_right">전체연령가</p>
+                                            </div>
+                                            <div class="r_t_bottom po_absol">
+                                                <strong class="po_absol">겨울왕국2</strong>
+                                                <p class="r_eng_name">FROZEN 2</p>
+                                                <span class="r_t_cinema">카멜레온 강남</span>
+                                                <p class="r_t_seat">3관 8층</p>
+                                                <span class="r_t_num">일반 2명</span>
+                                                <a href="" type="button">15:30</a>
+                                            </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="r_ticket">
+                                        <div class="r_t_top po_relat">
+                                            <p class="r_t_top fl_left">2D</p>
+                                            <p class="r_t_top fl_right">전체연령가</p>
+                                        </div>
+                                        <div class="r_t_bottom po_absol">
+                                            <strong class="po_absol">겨울왕국2</strong>
+                                            <p class="r_eng_name">FROZEN 2</p>
+                                            <span class="r_t_cinema">카멜레온 강남</span>
+                                            <p class="r_t_seat">4관 8층</p>
+                                            <span class="r_t_num">일반 2명</span>
+                                            <a href="" type="button">17:10</a>
+                                        </div>   
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="r_ticket">
+                                        <div class="r_t_top po_relat">
+                                            <p class="r_t_top fl_left">3D</p>
+                                            <p class="r_t_top fl_right">전체연령가</p>
+                                        </div>
+                                        <div class="r_t_bottom po_absol">
+                                            <strong class="po_absol">겨울왕국2</strong>
+                                            <p class="r_eng_name">FROZEN 2</p>
+                                            <span class="r_t_cinema">카멜레온 강남</span>
+                                            <p class="r_t_seat">8관 9층</p>
+                                            <span class="r_t_num">일반 2명</span>
+                                            <a href="" type="button">20:00</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="r_t_btn">
+                                <li>
+                                    <a href="" type="button" class="r_t_prev  po_absol"></a>
+                                    <a href="" type="button" class="r_t_next  po_absol"></a>
+                                </li>
+                            </ul>
+                
+                            <div class="r_select_btn po_absol">
+                                <a href="" class="r_reserve boder_bx fl_left">예약정보수정</a>
+                                <a href="" class="r_seat">좌석선택</a>
+                            </div>
                         </div>
                     </li>
                     <li class="over fl_left po_relat">

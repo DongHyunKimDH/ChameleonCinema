@@ -14,14 +14,13 @@
     <script src="../asset/js/jquery.bxslider.min.js"></script>
     <script src="../asset/js/tab.js"></script>
     <script src="../asset/js/common.js"></script>
-    <script src="../asset/js/jquery.bxslider.min.js"></script>
     <script>
         $(document).ready(function () {
             $('#mainSlider .visual').bxSlider({
                 mode: 'fade',    //'horizontal'(기본값), 'vertical', 'fade'
-                auto: false,     //false(기본값), 자동실행을 원하면 추가
-                pause: 2000,    //4000(4초 기본값), 1초 = 1000
-                autoControls: true, //시작과 정지버튼 생성, 기본값 false
+                //auto: false,     //false(기본값), 자동실행을 원하면 추가
+                //pause: 2000,    //4000(4초 기본값), 1초 = 1000
+                //autoControls: false, //시작과 정지버튼 생성, 기본값 false
                 ariaLive: true, //스크린리더 사용자에게 변경된 정보를 알릴지 여부
                 ariaHidden: true, //보여지는 슬라이더 내요인지 여부
                 prevText: '이전 슬라이더 보기',
@@ -38,7 +37,7 @@
 <body>
     <div id="skip">
         <a href="#gnb">주메뉴 바로가기</a>
-        <a href="#subpage_content">본문바로가기</a>
+        <a href="#mv_content">본문바로가기</a>
     </div>
 
     <header id="header">
@@ -147,10 +146,10 @@
         </div>
     </header>
 
-    <section id="subpage_content" class="wid1920 contain po_relat">
+    <section id="mv_content" class="wid1920 contain po_relat">
         <div id="sub_m_tit" class="po_absol txt_cen boder_bx">
             <h2>영 화</h2>
-            <ul>
+            <ul class="mv_menu">
                 <li><a href="">박스오피스</a></li>
                 <li class="sub_select"><a href="">최신개봉작</a></li>
                 <li><a href="">상영예정작</a></li>
@@ -263,18 +262,20 @@
                 </div>
                 <div class="mv_steel f_l po_absol">
                     <h3>영상 · 스틸컷 · 포토</h3>
-                    <div class="media_slider">
-                        <ul class="cle_both">
-                            <li class="">
-                                <a target="_blank" href="https://youtu.be/Gz0ZeY1U4vY"><img src="../asset/images/movie/kim_steel01.jpg" alt=""></a>
-                            </li>
-                            <li class="">
-                                <img src="../asset/images/movie/kim_steel02.jpg" alt="">
-                            </li>
-                            <li class="">
-                                <img src="../asset/images/movie/kim_steel03.jpg" alt="">
-                            </li>
-                        </ul>
+                    <div class="po_relat">
+                        <div class="media_slider">
+                            <ul class="cle_both">
+                                <li class="">
+                                    <a target="_blank" href="https://youtu.be/Gz0ZeY1U4vY"><img src="../asset/images/movie/kim_steel01.jpg" alt=""></a>
+                                </li>
+                                <li class="">
+                                    <img src="../asset/images/movie/kim_steel02.jpg" alt="">
+                                </li>
+                                <li class="">
+                                    <img src="../asset/images/movie/kim_steel03.jpg" alt="">
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -11,16 +11,35 @@
         <script src="js/html5shiv.min.js"></script>
     <![endif]-->
     <script src="../asset/js/jquery-1.12.4.min.js"></script>
-    <script src="../asset/js/jquery.bxslider.min.js"></script>
     <script src="../asset/js/tab.js"></script>
     <script src="../asset/js/common.js"></script>
+    <script>
+        $(document).ready(function () {
+            var $Year = '';
+            var $Month = '';
+            var $Day = '';
 
+            for (var i = 2020; i >= 1920; i--) {
+                $Year += '<option value="' + i + '">' + i + '</option>';
+            };
+            for (var i = 1; i <= 12; i++) {
+                $Month += '<option value="' + i + '">' + i + '</option>';
+            };
+            for (var i = 1; i <= 31; i++) {
+                $Day += '<option value="' + i + '">' + i + '</option>';
+            };
+
+            $('#year').html($Year);
+            $('#month').html($Month);
+            $('#day').html($Day);
+        });
+    </script>
 </head>
 
 <body>
     <div id="skip">
         <a href="#gnb">주메뉴 바로가기</a>
-        <a href="#subpage_content">본문바로가기</a>
+        <a href="#join_content">본문바로가기</a>
     </div>
 
     <header id="header">
@@ -44,7 +63,8 @@
                     <li><a href="../movie/recently.html">영화</a></li>
                     <li><a href="../cinema/c_finder.html">영화관</a></li>
                     <li><a href="">이벤트</a></li>
-                    <li class="all_Menu"><a href="#sitemap"><img src="../asset/images/common/icon_menu.gif" alt="전체메뉴보기"></a></li>
+                    <li class="all_Menu"><a href="#sitemap"><img src="../asset/images/common/icon_menu.gif"
+                                alt="전체메뉴보기"></a></li>
                 </ul>
             </nav>
         </div>
@@ -129,14 +149,100 @@
         </div>
     </header>
 
-    <section id="subpage_content" class="wid1920 contain po_relat">
-        <div id="sub_m_tit" class="po_absol txt_cen boder_bx">
-            <h2>영화</h2>
-            <ul>
-                <li><a href="">박스오피스</a></li>
-                <li class="sub_select"><a href="">최신개봉작</a></li>
-                <li><a href="">상영예정작</a></li>
+    <section id="join_content" class="po_relat">
+        <div id="sub_m_tit" class="join_menu po_absol txt_cen">
+            <h2>회 원 가 입</h2>
+            <ul class="tablist cle_both contain" role="tablist" aria-label="회원가입 탭">
+                <li class="tab" role="tab" id="tab1" aria-controls="tabpanel1">이용약관</li>
+                <li class="tab" role="tab" id="tab2" aria-controls="tabpanel2">회원가입</li>
             </ul>
+        </div>
+        <div id="join_main" class="contain">
+            <div class="tabpanel1" role="tabpanel" id="tabpanel1" aria-labelledby="tab1">
+
+            </div>
+            <div class="tabpanel2 txt_cen" role="tabpanel" id="tabpanel2" aria-labelledby="tab2">
+                <form action="" method="get">
+                    <table>
+                        <caption>아이디, 비밀번호, 생년월일, 이름 입력필수</caption>
+                        <tbody id="join">
+                            <tr class="tr1">
+                                <th scope="row">
+                                    <label for="uid">아이디</label>
+                                </th>
+                                <td>
+                                    <input type="text" id="uid" name="uid" maxlength="12">
+                                    <button type="button" class="boder_bx">중복확인</button>
+                                </td>
+                            </tr>
+                            <tr class="tr2">
+                                <th scope="row">비밀번호</th>
+                                <td>
+                                    <input type="password" id="upw" name="upw" maxlength="12">
+                                    <p class="jo_fz">비밀번호</p>
+                                </td>
+                                <th scope="row">비밀번호 확인</th>
+                                <td>
+                                    <input type="password" id="upwchk" name="upwchk" maxlength="12">
+                                </td>
+                            </tr>
+                            <tr class="tr3">
+                                <th scope="row">생년월일</th>
+                                <td>
+                                    <select id="year" name="year" title="태어난 년"></select>
+                                    <label for="year" class="jo_fz">년</label>
+                                    <select id="month" name="month" title="태어난 월"></select>
+                                    <label for="month" class="jo_fz">월</label>
+                                    <select id="day" name="day" title="태어난 일"></select>
+                                    <label for="day" class="jo_fz">일</label>
+                                </td>
+                                <th scope="row">성별</th>
+                                <td>
+                                    <input type="radio" id="gd_man" name="gender" value="남" checked>
+                                    <label for="gd_man" class="jo_fz">남</label>
+                                    <input type="radio" id="gd_woman" name="gender" value="여">
+                                    <label for="gd_woman" class="jo_fz">여</label>
+                                    <input type="radio" id="gd_efc" name="gender" value="기타">
+                                    <label for="gd_efc" class="jo_fz">기타</label>
+                                </td>
+                            </tr>
+                            <tr class="tr4">
+                                <th scope="row">이름</th>
+                                <td>
+                                    <input type="text" maxlength="8">
+                                </td>
+                                <th scope="row">닉네임</th>
+                                <td>
+                                    <input type="text" maxlength="8">
+                                </td>
+                            </tr>
+                            <tr class="tr5">
+                                <th scope="row">휴대폰</th>
+                                <td>
+                                    <input type="text" class="jo_f_w" maxlength="3">
+                                    <span>-</span>
+                                    <input type="text" class="jo_f_w" maxlength="4">
+                                    <span>-</span>
+                                    <input type="text" class="jo_f_w" maxlength="4">
+                                    <button type="button" class="boder_bx">본인인증</button>
+                                    <p>
+                                        <input type="checkbox" id="sms1" name="sms1" value="SMS 수신 동의">
+                                        <label for="sms1" class="jo_fz">SMS 수신 동의</label>
+                                    </p>
+                                </td>
+                                <th scope="row">이메일</th>
+                                <td>
+                                    <input type="text">
+                                    <p>
+                                        <input type="checkbox" id="sms2" name="sms2" value="SMS 수신 동의">
+                                        <label for="sms2" class="jo_fz">SMS 수신 동의</label>
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
         </div>
     </section>
 

@@ -139,7 +139,7 @@
         <div id="faq" class="boder_bx">
             <div id="location_bar">
                 <a href="../index.html"><img src="../asset/images/common/icon_home.gif" alt="홈 아이콘"></a> &gt; 고객센터 &gt;
-                자주묻는질문
+                1:1 문의
             </div>
             <h2 class="txt_cen">고객센터</h2>
             <ul id="iconBox" class="txt_cen cle_both">
@@ -251,11 +251,12 @@
                             <input type=radio value="지점문의" name="question" id="branch" checked><label for="branch">지점문의</label>
                             <input type=radio value="기타문의" name="question" id="etc"><label for="etc">기타문의</label>
                             
-                            <div class="selAreaWrap po_relat">
+                            <div class="selAreaWrap selFirst po_relat">
                                 <button class="areaBtn" type="button">
-                                    <span>지역선택</span>
+                                    <span class="triangle">지역선택</span>
                                 </button>
                                 <ul class="selArea po_absol ulBtn">
+                                    <li><button type="button">지역선택</button></li>
                                     <li><button type="button">서울</button></li>
                                     <li><button type="button">경기</button></li>
                                     <li><button type="button">인천</button></li>
@@ -265,11 +266,12 @@
                                     <li><button type="button">전라</button></li>
                                 </ul>
                             </div>
-                            <div class="selAreaWrap po_relat">
+                            <div class="selAreaWrap selSecond po_relat">
                                 <button class="cinemaBtn" type="button">
-                                    <span>지점선택</span>
+                                    <span class="triangle">지점선택</span>
                                 </button>
                                 <ul class="selCinema po_absol ulBtn">
+                                    <li><button type="button">지점선택</button></li>
                                     <li><button type="button">강남</button></li>
                                     <li><button type="button">강변</button></li>
                                     <li><button type="button">건대입구</button></li>
@@ -286,10 +288,18 @@
                     <tr>
                         <th scope="row" id="quesType">문의유형</th>
                         <td colspan="3" headers="quesType">
-                            <select name="selType" id="selType">
-                                <option value="문의유형 선택">문의유형 선택</option>
-                                <option value=""></option>
-                            </select>
+                            <div class="quesType po_relat">
+                                <button type="button">
+                                    <span class="triangle">유형 선택</span>
+                                </button>
+                                <ul class="selType po_absol">
+                                    <li><button type="button">문의유형 선택</button></li>
+                                    <li><button type="button">일반 문의</button></li>
+                                    <li><button type="button">칭찬</button></li>
+                                    <li><button type="button">불만</button></li>
+                                    <li><button type="button">제안</button></li>
+                                </ul>
+                            </div>
                         </td>
                     </tr>
                     <tr>
@@ -303,13 +313,21 @@
                     <tr>
                         <th scope="row" id="quesContent"><label for="quesTarea">내용</label></th>
                         <td colspan="3" headers="quesContent">
-                            <textarea name="quesTarea" id="quesTarea" cols="30" rows="10"></textarea>
+                            <textarea name="quesTarea" id="quesTarea" cols="30" rows="10" maxlength="2000"></textarea>
+                            <p>
+                                <span>0</span>/2000자
+                            </p>
                         </td>
                     </tr>
                     <tr>
                         <th scope="row" id="quesAddfile"><label for="quesFile"></label>파일첨부</th>
                         <td colspan="3" headers="quesAddfile">
                             <input type="file" name="quesFile" id="quesFile">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="txt_cen" colspan="4">
+                            <input type="submit" value="등록">
                         </td>
                     </tr>
                 </tbody>

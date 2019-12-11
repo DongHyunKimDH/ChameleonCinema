@@ -6,6 +6,16 @@
 {
     background-position-y : -100px !important;
 }
+button
+{
+    text-align : left;
+    color : inherit;
+    font-weight : inherit;
+}
+input[type="file"]
+{
+    background : none;
+}
 
 /* FAQ 시작 */
 #subpage_content
@@ -25,7 +35,8 @@
 {
     border-bottom : 1px solid #333;
 }
-#faq h2.txt_cen
+
+#location_bar + h2.txt_cen
 {
     height : 80px;
     line-height : 80px;
@@ -159,8 +170,7 @@
     height : 49px;
     border-bottom : 1px solid #eee;
 }
-#boardArea .boardList > a:hover .boardHead3,
-#boardArea .boardList > a:focus .boardHead3
+#boardArea .boardList > a:hover .boardHead3
 {
     color : #eb651e;
 }
@@ -288,7 +298,7 @@
 {
     width : 1200px;
     font-size : 20px;
-    
+    margin-bottom : 80px;
 }
 #quesForm tr
 {
@@ -337,23 +347,32 @@
 {
     margin-left : 50px;
 }
-#quesForm .selAreaWrap > button
+#quesForm .selAreaWrap > button,
+#quesForm .quesType > button
 {
     width : 140px;
     height : 40px;
     line-height : 38px;
     border : 1px solid #333;
-    border-radius : 8px;
-    background : pink;
     padding-left : 12px;
-    text-align : left;
 }
-
-#quesForm .selAreaWrap .selArea
+#quesForm .selAreaWrap > button:hover,
+#quesForm .selAreaWrap > button:focus,
+#quesForm .quesType > button:hover,
+#quesForm .quesType > button:focus
+{
+    -webkit-border-radius : 8px;
+    -moz-border-radius : 8px;
+    border-radius : 8px;
+}
+#quesForm .selAreaWrap .selArea,
+#quesForm .selAreaWrap .selCinema,
+#quesForm .quesType .selType
 {
     display : none;
 }
-#quesForm .selAreaWrap li
+#quesForm .selAreaWrap li,
+#quesForm .quesType .selType li
 {
     padding-left : 20px;
     background : #fff;
@@ -361,9 +380,280 @@
     width : 140px;
     height : 40px;
     line-height : 38px;
+    -webkit-box-sizing : border-box;
+    -moz-box-sizing : border-box;
+    box-sizing : border-box;
+
 }
-#quesForm .selAreaWrap .selCinema
+#quesForm .selAreaWrap li button
 {
-    
+    width : 140px;
 }
+
+#quesForm .selAreaWrap button .triangle:after,
+#quesForm .quesType button .triangle:after
+{
+    content : "";
+    position : absolute;
+    z-index : 200;
+    right : 10px;
+    top : 16px;
+    border-top : 10px solid #aaa;
+    border-left : 8px solid transparent;
+    border-right : 8px solid transparent;
+}
+#quesForm .selAreaWrap button.active .triangle:after,
+#quesForm .quesType.active button .triangle:after
+{
+    -webkit-transform : rotate(180deg);
+    -moz-transform : rotate(180deg);
+    -o-transform : rotate(180deg);
+    -ms-transform : rotate(180deg);
+    transform : rotate(180deg);
+}
+#quesForm .quesType
+{
+    display : inline-block;
+    /* height : 40px;
+    overflow: hidden; */
+}
+#quesForm .quesType .selType li
+{
+    padding-left : 15px;
+}
+#quesForm #quesTit
+{
+    width : 100%;
+}
+#quesForm #quesTarea
+{
+    width : 100%;
+}
+#quesForm input[type="submit"]
+{
+    width : 100px;
+    color : #fff;
+    background : #eb651e;
+}
+/* transition */
+#quesForm .selAreaWrap > button,
+#quesForm .quesType > button,
+#quesForm .selAreaWrap button .triangle:after,
+#quesForm .quesType button .triangle:after
+{
+    -webkit-transition : all 0.5s;
+    -moz-transition : all 0.5s;
+    -o-transition : all 0.5s;
+    transition : all 0.5s;
+}
+
 /* question 종료 */
+
+/* c_finder 시작 */
+#cinemaTab .tablist
+{
+    width : 100%;
+    height : 100px;
+    line-height : 98px;
+    padding : 0px 119px;
+    text-align : center;
+    font-size : 20px;
+    border-top : 1px solid #ccc;
+    border-bottom : 1px solid #ccc;
+    margin-bottom : 70px;
+}
+#cinemaTab .tablist li
+{
+    float : left;
+    width : 137px;
+    height : 100px;
+    cursor : pointer;
+}
+#cinemaTab .tablist li + li
+{
+    /* border-left : 1px solid #ccc; */
+}
+#cinemaTab .tablist li:hover,
+#cinemaTab .tablist li:focus
+{
+    color : #eb651e;
+    font-weight : 600;
+}
+#cinemaTab .tabpanel
+{
+    height : 230px;
+    margin-bottom : 70px;
+}
+#cinemaTab .tabpanel ul
+{
+    height : 30px;
+    line-height : 30px;
+    font-size : 18px;
+    padding : 0px 119px 70px;
+    text-align : center;
+}
+#cinemaTab .tabpanel ul:last-child
+{
+    padding-bottom : 0px;
+}
+#cinemaTab .tabpanel ul li
+{
+    float : left;
+    width : 137px;
+}
+#cinemaTab .tabpanel ul li a:hover,
+#cinemaTab .tabpanel ul li a:focus,
+#cinemaTab .tab.active
+{
+    color : #eb651e;
+}
+
+#cinemaTab .tabpanel
+{
+    display :none;
+}
+#cinemaTab .tabpanel.active
+{
+    display :block;
+}
+
+
+#c_finder_cnt2
+{
+    margin-bottom : 70px;
+}
+#c_finder_cnt2 .cnt2
+{
+    height : 975px;
+    background : url("../images/cinema/cinema1.png") no-repeat center top;
+}
+#c_finder_cnt2 .cnt2 #opaBox
+{
+    position : absolute;
+    left : 0px;
+    bottom : 0px;
+    width : 100%;
+    height : 250px;
+    background : rgba(0,0,0,0.5);
+    font-size : 40px;
+    color : #fff;
+}
+#opaBox .opaTxt
+{
+    padding : 50px 0px 50px 26px;
+}
+#opaBox .opaTxt a
+{
+    display : inline-block;
+    font-size : 20px;
+    width : 180px;
+    height : 40px;
+    line-height : 38px;
+    text-align : center;
+
+}
+#opaBox .opaTxt a:last-child
+{
+    margin-left : 30px;
+}
+#opaBox .opaTxt a:hover,
+#opaBox .opaTxt a:focus
+{
+    border : 1px solid #fff;
+    border-radius : 4px;
+}
+#opaBox .opaTxt a
+{
+    transition : all 0.5s;
+}
+
+.timeTable h2
+{
+    padding-bottom : 80px;
+}
+
+.timeTable .printDate
+{
+    padding-left : 56px;
+    font-size : 30px;
+}
+.timeTable .printDate:before
+{
+    content : "";
+}
+.timeTable .printDate:after
+{
+    content : "";
+}
+#mvListArea
+{
+    height : 417px;
+    background : pink;
+}
+#mvListArea > div
+{
+    float : left;
+}
+#mvListArea .mvInfo
+{
+    width : 442px;
+    height : 134px;
+    vertical-align : middle;
+    padding : 84px 0px 0px 52px;
+}
+#mvListArea .mvInfo img
+{
+    vertical-align : middle;
+}
+#mvListArea .mvInfo > h3
+{
+    height : 50px;
+    line-height : 50px;
+}
+#mvListArea .mvInfo h3
+{
+    display : inline-block;
+    padding-left : 30px;
+    width : 150px;
+
+}
+#mvListArea .mvInfo div
+{
+    display : inline-block;
+    height : 50px;
+    width : 80px;
+}
+#mvListArea .mvTime
+{
+    width : 758px;
+    height : 417px;
+    padding : 96px 29px 96px 36px;
+}
+#mvListArea .mvTime ul
+{
+    height : 78px;
+    text-align : center;
+}
+#mvListArea .mvTime ul+ul
+{
+    padding-top : 67px;
+}
+#mvListArea .mvTime ul li
+{
+    float : left;
+}
+#mvListArea .mvTime ul li+li
+{
+    padding-left : 60px;
+}
+#mvListArea .mvTime ul li a
+{
+    display : block;
+    width : 78px;
+}
+#mvListArea .mvTime ul li a span
+{
+    display : block;
+    font-size : 20px;
+}
+/* c_finder 종료 */

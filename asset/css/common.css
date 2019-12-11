@@ -82,10 +82,12 @@ header, article, section, footer, nav{display : block;}
 address{font-style : normal;}
 input, select, textarea{font-family : inherit; font-size : inherit; color : inherit;}
 input[type="text"], input[type="password"], select, textarea{border : 1px solid #aaa;}
-select{-moz-appearance : none; -webkit-appearance : none; appearance:none;}
+/* select{-moz-appearance : none; -webkit-appearance : none; appearance:none;} */
 select::-ms-expand{display : none;}
 input[type="submit"], input[type="reset"], button{background : none; border : none; cursor : pointer;}
 
+.wid1920{width : 100%;}
+.contain{width : 1200px;margin : 0px auto;}
 .fl_left{float : left;}
 .fl_right{float : right;}
 .po_absol{position : absolute;}
@@ -103,11 +105,6 @@ body
     font-weight: 400;
     color : #555;
 }
-.wid1920
-{
-    width : 100%;
-}
-
 
 #skip a
 {
@@ -129,7 +126,7 @@ body
 #header,
 #header_btn,
 .logo.logoMt,
-#gnb
+#gnb,
 #sitemap.siteTop
 {
     -webkit-transition : all 0.2s;
@@ -264,13 +261,6 @@ body
 #sitemap .sitemap_box ul li ul:before{content:""; position: absolute; width: 30px;height: 2px;background: #ea651e;margin-top: -15px;}
 #sitemap .sitemap_box ul li ul li{font-size: 13px; color: #555555; font-weight: 400;line-height: 1.7;}
 /* sitemap end */
-
-.contain
-{
-    width : 1200px;
-    margin : 0px auto;
-}
-
 
 #footer
 {
