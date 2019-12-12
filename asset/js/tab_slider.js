@@ -1,4 +1,24 @@
 $(document).ready(function() {
+    /* var tabSlider = $('.media_slider .mediSlide1, .media_slider .mediSlide2').bxSlider({
+        mode: 'horizontal', //'horizontal'(기본값), 'vertical', 'fade'
+        //auto: false,     //false(기본값), 자동실행을 원하면 추가
+        //pause: 2000,    //4000(4초 기본값), 1초 = 1000
+        //autoControls: false, //시작과 정지버튼 생성, 기본값 false
+        ariaLive: true, //스크린리더 사용자에게 변경된 정보를 알릴지 여부
+        ariaHidden: true, //보여지는 슬라이더 내요인지 여부
+        prevText: '이전 슬라이더 보기',
+        nextText: '다음 슬라이더 보기',
+        startText: '애니메이션 시작',
+        stopText: '애니메이션 정지',
+        slideWidth: 226, //한줄에 여러개 보여질때 li의 너비 축소값
+        minSlides: 3, //한줄에 보여질 최소 슬라이더 개수
+        maxSlides: 3, //한줄에 보여질 최대 슬라이더 개수
+        moveSlides: 1, //이전, 다음 클릭하면 움직일 개수
+        slideMargin: 8 //슬라이드 간의 여백
+    }); */
+    /* var mql = window.matchMedia("screen and (max-width: 1920px)"); mql.addListener(function(e) { if(!e.matches) { slider.reloadSlider(); } }); */
+
+    $('.bx-controls-direction a').wrap('<div class="white"></div>');
   $('.tab:first-of-type, .tabpanel:first-of-type').addClass('active').attr('tabIndex', 0);
   //의미적 표현(접근성-state) : 탭버튼 : aria-selected, 탭패널 : aria-hidden
   $('.tab:first-of-type').attr('aria-selected', true);
@@ -41,7 +61,6 @@ $(document).ready(function() {
   //3) 탭 클릭 이벤트
   $('.tab').on('click', function () {
     var $tg = $(this);
-    $(window).trigger('resize');
     activeOn($tg);
   });
 

@@ -385,9 +385,10 @@ input[type="file"]
     box-sizing : border-box;
 
 }
-#quesForm .selAreaWrap li button
+#quesForm .selAreaWrap li button,
+#quesForm .selType li button
 {
-    width : 140px;
+    width : 120px;
 }
 
 #quesForm .selAreaWrap button .triangle:after,
@@ -571,89 +572,222 @@ input[type="file"]
 {
     padding-bottom : 80px;
 }
-
+.timeTable .printDate button img,
+.timeTable .printDate span
+{
+    vertical-align : middle;
+}
 .timeTable .printDate
 {
     padding-left : 56px;
+}
+.timeTable .printDate > button:nth-child(1)
+{
+    /* padding-right : 30px; */
+}
+.timeTable .printDate .pDate
+{
+    width : 200px;
     font-size : 30px;
+    padding : 0px 15px;
 }
-.timeTable .printDate:before
+.timeTable .printDate button:nth-child(2),
+.timeTable .printDate button:nth-child(3)
 {
-    content : "";
+    width : 50px;
+    height : 50px;
 }
-.timeTable .printDate:after
+.timeTable #calendar
 {
-    content : "";
+    display :none;
+    z-index : 500;
+    width : 200px;
+    text-align : center;
+    top : -224px;
 }
-#mvListArea
+.timeTable #calendar tr
 {
-    height : 417px;
-    background : pink;
+    background : rgb(249, 249, 249);
 }
-#mvListArea > div
+.timeTable #calendar thead tr:first-child
+{
+    height: 50px;
+}
+.timeTable #calendar tr th,
+.timeTable #calendar tr th img
+{
+    vertical-align : middle;
+}
+.timeTable #calendar tr td
+{
+    cursor : pointer;
+}
+
+.mvListArea
+{
+    height : 415px;
+    border-top : 1px solid #ddd; 
+    border-bottom : 1px solid #ddd;
+}
+.mvListArea > div
 {
     float : left;
 }
-#mvListArea .mvInfo
+.mvListArea .mvInfo
 {
     width : 442px;
-    height : 134px;
-    vertical-align : middle;
+    height : 417px;
     padding : 84px 0px 0px 52px;
 }
-#mvListArea .mvInfo img
+.mvListArea .mvInfo > *
+{
+    vertical-align: middle;
+}
+.mvListArea .mvInfo img
 {
     vertical-align : middle;
 }
-#mvListArea .mvInfo > h3
+.mvListArea .mvInfo > h3
 {
+    font-weight : 500;
     height : 50px;
     line-height : 50px;
 }
-#mvListArea .mvInfo h3
+.mvListArea .mvInfo h3
 {
     display : inline-block;
     padding-left : 30px;
     width : 150px;
-
+    font-size : 20px;
 }
-#mvListArea .mvInfo div
+.mvListArea .mvInfo div
 {
     display : inline-block;
     height : 50px;
     width : 80px;
+    text-align : center;
 }
-#mvListArea .mvTime
+.mvListArea .mvInfo div p
+{
+    font-size : 20px;
+    height : 30px;
+}
+.mvListArea .mvInfo .room span
+{
+    
+}
+.mvListArea .mvTime
 {
     width : 758px;
     height : 417px;
-    padding : 96px 29px 96px 36px;
+    padding : 80px 29px 96px 36px;
 }
-#mvListArea .mvTime ul
+.mvListArea .mvTime ul
 {
     height : 78px;
     text-align : center;
 }
-#mvListArea .mvTime ul+ul
+.mvListArea .mvTime ul+ul
 {
     padding-top : 67px;
 }
-#mvListArea .mvTime ul li
+.mvListArea .mvTime ul li
 {
     float : left;
 }
-#mvListArea .mvTime ul li+li
+.mvListArea .mvTime ul li+li
 {
     padding-left : 60px;
 }
-#mvListArea .mvTime ul li a
+.mvListArea .mvTime ul li a
 {
     display : block;
     width : 78px;
 }
-#mvListArea .mvTime ul li a span
+.mvListArea .mvTime ul li a:hover,
+.mvListArea .mvTime ul li a:focus
+{
+    color : #eb651e;
+}
+.mvListArea .mvTime ul li a span
 {
     display : block;
     font-size : 20px;
+}
+
+#minimap
+{
+    display : none;
+    margin-left : 40px;
+    background: #e1e1e1;
+    width : 238px;
+    height : 383px;
+    font-size : 26px;
+    font-weight : 400;
+}
+#minimap:after
+{
+    position : absolute;
+    content : "";
+    left : 50%;
+    margin-left : -5px;
+    bottom : -15px;
+    width : 15px;
+    height : 8px;
+    border-top : 15px solid #e1e1e1;
+    border-left : 8px solid transparent;
+    border-right : 8px solid transparent;
+    box-sizing: border-box;
+
+}
+#minimap h4
+{
+    padding : 7px 0px;
+    border-bottom : 1px solid #aaa;
+    margin-bottom : 14px;
+}
+#minimap strong
+{
+    display : block;
+}
+#minimap strong:last-child
+{
+    padding : 14px 0px;
+    border-top : 1px solid #aaa;
+    margin-top : 20px;
+}
+#minimap .seat
+{
+    margin-top : 14px;
+    padding : 0px 7px;
+    width : 228px;
+    height : 190px;
+    text-align : center;
+}
+#minimap .seat .selSeat
+{
+    float : left;
+    width : 15px;
+    height : 15px;
+    background : #333;
+    margin-bottom : 4px;
+    margin-left : 4px;
+}
+#minimap .seat .selSeat:nth-child(1),
+#minimap .seat .selSeat:nth-child(13),
+#minimap .seat .selSeat:nth-child(25),
+#minimap .seat .selSeat:nth-child(37),
+#minimap .seat .selSeat:nth-child(49),
+#minimap .seat .selSeat:nth-child(61),
+#minimap .seat .selSeat:nth-child(73),
+#minimap .seat .selSeat:nth-child(85),
+#minimap .seat .selSeat:nth-child(97),
+#minimap .seat .selSeat:nth-child(109)
+{
+    margin-left : 0px;
+}
+#minimap .seat .scol
+{
+    background : #fff;
 }
 /* c_finder 종료 */
