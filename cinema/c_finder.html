@@ -15,10 +15,11 @@
         <script src="js/html5shiv.min.js"></script>
     <![endif]-->
     <script src="../asset/js/jquery-1.12.4.min.js"></script>
-    <script src="../asset/js/jquery.bxslider.min.js"></script>
     <script src="../asset/js/tab.js"></script>
     <script src="../asset/js/common.js"></script>
+    <script src="../asset/js/finder.js"></script>
     <script src="../asset/js/sub.js"></script>
+    <!-- <script src="../asset/js/jquery.bxslider.min.js"></script> -->
 
 </head>
 
@@ -124,7 +125,7 @@
                         <ul>
                             <li><a href="../notice/faq.html">자주 묻는 질문</a></li>
                             <li><a href="">공지사항</a></li>
-                            <li><a href="">문의하기</a></li>
+                            <li><a href="../notice/question.html">문의하기</a></li>
                             <li><a href="">분실문 문의 및 접수</a></li>
                             <li><a href="">단체 및 대관문의</a></li>
                         </ul>
@@ -151,7 +152,7 @@
                 <li id="tab6" class="tab" role="tab" aria-controls="tabpanel6">경상</li>
                 <li id="tab7" class="tab last" role="tab" aria-controls="tabpanel7">전라</li>
             </ul>
-            <div id="tabpanel1" class="tabpanel" role="tabpanel" aria-labelleadby="tab1">
+            <div id="tabpanel1" class="tabpanel" role="tabpanel" aria-labelledby="tab1">
                 <ul class="">
                     <li><a href="">강남</a></li>
                     <li><a href="">강변</a></li>
@@ -180,7 +181,7 @@
                     <li><a href="">홍대</a></li>
                 </ul>
             </div>
-            <div id="tabpanel2" class="tabpanel" role="tabpanel" aria-labelleadby="tab2">
+            <div id="tabpanel2" class="tabpanel" role="tabpanel" aria-labelledby="tab2">
                 <ul class="">
                     <li><a href="">경기광주</a></li>
                     <li><a href="">광교상현</a></li>
@@ -209,7 +210,7 @@
                     <li><a href="">평택소사</a></li>
                 </ul>
             </div>
-            <div id="tabpanel3" class="tabpanel" role="tabpanel" aria-labelleadby="tab3">
+            <div id="tabpanel3" class="tabpanel" role="tabpanel" aria-labelledby="tab3">
                 <ul class="">
                     <li><a href="">계양</a></li>
                     <li><a href="">남주안</a></li>
@@ -226,7 +227,7 @@
                 </ul>
                 <ul class=""></ul>
             </div>
-            <div id="tabpanel4" class="tabpanel" role="tabpanel" aria-labelleadby="tab4">
+            <div id="tabpanel4" class="tabpanel" role="tabpanel" aria-labelledby="tab4">
                 <ul class="">
                     <li><a href="">당진</a></li>
                     <li><a href="">대전</a></li>
@@ -254,7 +255,7 @@
                     <li><a href="">홍성</a></li>
                 </ul>
             </div>
-            <div id="tabpanel5" class="tabpanel" role="tabpanel" aria-labelleadby="tab5">
+            <div id="tabpanel5" class="tabpanel" role="tabpanel" aria-labelledby="tab5">
                 <ul class="">
                     <li><a href="">강릉</a></li>
                     <li><a href="">원주</a></li>
@@ -265,7 +266,7 @@
                 <ul class=""></ul>
                 <ul class=""></ul>
             </div>
-            <div id="tabpanel6" class="tabpanel" role="tabpanel" aria-labelleadby="tab6">
+            <div id="tabpanel6" class="tabpanel" role="tabpanel" aria-labelledby="tab6">
                 <ul class="">
                     <li><a href="">거제</a></li>
                     <li><a href="">구미</a></li>
@@ -294,7 +295,7 @@
                     <li><a href="">해운대</a></li>
                 </ul>
             </div>
-            <div id="tabpanel7" class="tabpanel" role="tabpanel" aria-labelleadby="tab7">
+            <div id="tabpanel7" class="tabpanel" role="tabpanel" aria-labelledby="tab7">
                 <ul class="">
                     <li><a href="">광양</a></li>
                     <li><a href="">광주</a></li>
@@ -335,42 +336,120 @@
         </div>
     </section>
 
-    <section id="timaTable">
+    <section id="timeTable">
         <div class="timeTable contain">
             <h2 class="txt_cen">상영시간표</h2>
 
-            <div class="printDate">
-                <span>12월 11일</span>
+            <div class="printDate po_relat">
+                <button type="button"><img src="../asset/images/cinema/calendar.png" alt="날짜선택 달력 아이콘"></button>
+                <button type="button"><img src="../asset/images/common/icon_big_left.gif" alt="이전"></button>
+                <span class="pDate"></span>
+                <button type="button"><img src="../asset/images/common/icon_big_right.gif" alt="다음"></button>
+
+                <table id="calendar" class="po_absol">
+                    <caption>날짜선택을 할 수 있는 달력입니다.</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col"><button type="button"><img src="../asset/images/common/icon_left.gif" alt="이전달보기"></button></th>
+                            <th scope="col" colspan="5" id="tbCalendarYM"></th>
+                            <th scope="col"><button type="button"><img src="../asset/images/common/icon_right.gif" alt="다음달보기"></button></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="col">일</th>
+                            <th scope="col">월</th>
+                            <th scope="col">화</th>
+                            <th scope="col">수</th>
+                            <th scope="col">목</th>
+                            <th scope="col">금</th>
+                            <th scope="col">토</th>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <div id="mvListArea" class="">
+            <div class="mvListArea">
                 <div class="mvInfo boder_bx">
                     <img src="../asset/images/reserve/movie_age.gif" alt="전체연령가">
                     <h3>겨울왕국 2</h3>
-                    <div>
+                    <div class="room">
                         <p>1관</p><span>디지털</span>
                     </div>
-                    
                 </div>
                 <div class="mvTime boder_bx">
                     <ul>
-                        <li><a href=""><span>09:10</span>33/103</a></li>
-                        <li><a href=""><span>11:10</span>24/103</a></li>
-                        <li><a href=""><span>13:15</span>27/103</a></li>
-                        <li><a href=""><span>15:30</span>22/103</a></li>
+                        <li><a href="" role="button" title="좌석보기"><span>09:10</span>33/103</a></li>
+                        <li><a href="" role="button" title="좌석보기"><span>11:10</span>24/103</a></li>
+                        <li><a href="" role="button" title="좌석보기"><span>13:15</span>27/103</a></li>
+                        <li><a href="" role="button" title="좌석보기"><span>15:30</span>22/103</a></li>
                         <li><a href=""><span>17:40</span>44/103</a></li>
                     </ul>
                     <ul>
-                        <li><a href=""><span>19:45</span>79/103</a></li>
-                        <li><a href=""><span>21:30</span>46/103</a></li>
-                        <li><a href=""><span>23:55</span>11/103</a></li>
+                        <li><a href="" role="button" title="좌석보기"><span>19:45</span>79/103</a></li>
+                        <li><a href="" role="button" title="좌석보기"><span>21:30</span>46/103</a></li>
+                        <li><a href="" role="button" title="좌석보기"><span>23:55</span>11/103</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mvListArea">
+                <div class="mvInfo boder_bx">
+                    <img src="../asset/images/reserve/movie_age.gif" alt="전체연령가">
+                    <h3>겨울왕국 2</h3>
+                    <div class="room">
+                        <p>2관</p><span>디지털</span>
+                    </div>
+                </div>
+                <div class="mvTime boder_bx">
+                    <ul>
+                        <li><a href="" role="button" title="좌석보기"><span>09:10</span>33/103</a></li>
+                        <li><a href="" role="button" title="좌석보기"><span>11:10</span>24/103</a></li>
+                        <li><a href="" role="button" title="좌석보기"><span>13:15</span>27/103</a></li>
+                        <li><a href="" role="button" title="좌석보기"><span>15:30</span>22/103</a></li>
+                        <li><a href="" role="button" title="좌석보기"><span>17:40</span>44/103</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="" role="button" title="좌석보기"><span>19:45</span>79/103</a></li>
+                        <li><a href="" role="button" title="좌석보기"><span>21:30</span>46/103</a></li>
+                        <li><a href="" role="button" title="좌석보기"><span>23:55</span>11/103</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mvListArea">
+                <div class="mvInfo boder_bx">
+                    <img src="../asset/images/reserve/movie_age.gif" alt="전체연령가">
+                    <h3>겨울왕국 2</h3>
+                    <div class="room">
+                        <p>3관</p><span>디지털</span>
+                    </div>
+                </div>
+                <div class="mvTime boder_bx">
+                    <ul>
+                        <li><a href="" role="button" title="좌석보기"><span>09:10</span>33/103</a></li>
+                        <li><a href="" role="button" title="좌석보기"><span>11:10</span>24/103</a></li>
+                        <li><a href="" role="button" title="좌석보기"><span>13:15</span>27/103</a></li>
+                        <li><a href="" role="button" title="좌석보기"><span>15:30</span>22/103</a></li>
+                        <li><a href="" role="button" title="좌석보기"><span>17:40</span>44/103</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="" role="button" title="좌석보기"><span>19:45</span>79/103</a></li>
+                        <li><a href="" role="button" title="좌석보기"><span>21:30</span>46/103</a></li>
+                        <li><a href="" role="button" title="좌석보기"><span>23:55</span>11/103</a></li>
                     </ul>
                 </div>
             </div>
         </div>
 
-
     </section>
-
+    <div class="minMap">
+        <div id="minimap" class="po_absol txt_cen">
+            <h4>카멜레온 강남점</h4> <!-- 하단 보더 font-size 26px-->
+            <strong>Screen</strong>
+            <div id="pSe" class="seat"> <!-- 좌석 15x15 좌석간 여백 4px -->
+                
+            </div>
+            <strong>15:30 ~ 17:20</strong> <!-- 상단보더 -->
+        </div>
+    </div>
     <div class="wid1920">
         <footer id="footer">
             <div class="footerbox">
