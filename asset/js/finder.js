@@ -5,13 +5,12 @@ $(document).ready(function()
     var today = new Date();
     var date = new Date();
     var pday = ["일", "월", "화", "수", "목", "금", "토"];
-    
+    var chkNumber = 0;
     var pmon = today.getMonth()+1;
     var pdate = today.getDate();
     var todayDate = new Date(today.getFullYear(),today.getMonth()+1,today.getDate())
     var compareDate = new Date(date.getFullYear(),date.getMonth()+1,date.getDate());
     
-
 
     function prevCalendar() 
     {
@@ -75,13 +74,41 @@ $(document).ready(function()
          }
     }
 
-    $("#timeTable .printDate .pDate").text(pmon+"월 "+pdate+"일 ");
 
+    $("#timeTable .printDate .pDate").text(pmon+"월 "+pdate+"일 ");
     var lastDate = new Date(today.getFullYear(),today.getMonth()+1,0);
+
+    
+    //다음버튼
+    $("#timeTable .printDate button").eq(2).on("click", function()
+    {   
+        chkNumber++;
+        pdate++;
+        if(pdate > lastDate.getDate())
+        {
+            pdate=1;
+            pmon++;
+            
+            if(pmon > 12)
+            pmon=1; 
+        }
+        $("#timeTable .printDate .pDate").text(pmon+"월 "+pdate+"일 ");
+        
+        $(".pDate").prev().attr("disabled",false);
+    });
     // 이전버튼
     $("#timeTable .printDate button").eq(1).on("click",function()
     {
-        pdate--;
+        if(chkNumber==0)
+        {
+            $(this).attr("disabled",true);
+        }
+        else
+        {
+            pdate--;
+            chkNumber--;
+        }
+        
         if(pdate == 0)
         {
             pmon--;
@@ -91,25 +118,6 @@ $(document).ready(function()
         }
         $("#timeTable .printDate .pDate").text(pmon+"월 "+pdate+"일 ");
     });
-
-    //다음버튼
-    $("#timeTable .printDate button").eq(2).on("click", function()
-    {   
-    
-        pdate++;
-        pday[date.getDay()+1];
-        if(pdate > lastDate.getDate())
-        {
-            pdate=1;
-            pmon++;
-            
-            if(pmon > 12)
-            pmon=1;
-            
-        }
-        $("#timeTable .printDate .pDate").text(pmon+"월 "+pdate+"일 ");
-    });
-    
     var _printCal = $(".timeTable .printDate button").eq(0);
     var _prevM = $("#calendar thead tr th").eq(0).children("button");
     var _nextM = $("#calendar thead tr th").eq(2).children("button");
@@ -134,12 +142,19 @@ $(document).ready(function()
         nextCalendar();
         return false;
     });
-    _clickTd.on("click",function()
+
+    /* 동적생성된 되어진 태그에 이벤트를 주는 방식은 조금 다릅니다
+    $(document).on('이벤트명', '선택자', function() {});
+    그리고 오늘 이전은 캘린더 이전버튼이 동작되지 못하게 추가해 주세요 */
+    $(document).on('click', '#calendar tr td button', function () 
     {
-        alert();
+        var cliDay = $(this).text();
+        alert(cliDay);
+        var cliMon = $(this).closest("#tbCalendarYM").text();
         
+        $("#timeTable .printDate .pDate").text(pmon+"월 "+cliDay+"일 ");
     });
-    
+
     // Calendar 종료
 
     function minimap()
@@ -156,19 +171,33 @@ $(document).ready(function()
         for(var k=0; k<24; k++)
         {
             var rand = [Math.floor(Math.random()*120)+1];
-            $("#minimap #pSe .selSeat").eq(rand).addClass("scol");
+            $(".minimap #pSe .selSeat").eq(rand).addClass("scol");
         }
     }
     minimap();
+
     var _timeList = $("#timeTable .mvListArea .mvTime ul li a");
     _timeList.on("click", function()
     {
-        var showMap = $(".minMap").clone();
-        $(this).parent().appendTo(showMap);
-        /* $(this).on("mouseleave",function()
+        var showMap = $(".minimap").clone();
+        $(this).after(showMap).next().show();
+        $(this).parent().on("mouseleave",function()
         {
-            //$(this).next().remove();
-        }); */
+            $(this).find('.minimap').remove();
+        });
         return false;
     });
+    /* 
+    var _timeList = $("#timeTable .mvListArea .mvTime ul li a");
+    _timeList.on("click", function()
+    {
+        var showMap = $(".minMap").clone();  id 대신 클래스명으로 대신함
+        $(this).parent().appendTo(showMap);  처음대로 after로 교체
+         $(this).on("mouseleave",function()  a에서 마우스가 떠났을 대신 부모인 li에서 떠나는 것으로 했는데 이것은 a로 바꾸어도 될것 같아요. 그럼 미니맵으로는 마우스를 움직이지 못하겠죠?
+        {
+            $(this).next().remove();
+        });
+        return false;
+    });
+    */
 });
