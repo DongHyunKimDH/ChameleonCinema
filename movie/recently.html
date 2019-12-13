@@ -12,26 +12,8 @@
     <![endif]-->
     <script src="../asset/js/jquery-1.12.4.min.js"></script>
     <script src="../asset/js/jquery.bxslider.min.js"></script>
-    <script src="../asset/js/tab.js"></script>
+    <script src="../asset/js/tab_slider.js"></script>
     <script src="../asset/js/common.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('#mainSlider .visual').bxSlider({
-                mode: 'fade',    //'horizontal'(기본값), 'vertical', 'fade'
-                //auto: false,     //false(기본값), 자동실행을 원하면 추가
-                //pause: 2000,    //4000(4초 기본값), 1초 = 1000
-                //autoControls: false, //시작과 정지버튼 생성, 기본값 false
-                ariaLive: true, //스크린리더 사용자에게 변경된 정보를 알릴지 여부
-                ariaHidden: true, //보여지는 슬라이더 내요인지 여부
-                prevText: '이전 슬라이더 보기',
-                nextText: '다음 슬라이더 보기',
-                startText: '애니메이션 시작',
-                stopText: '애니메이션 정지'
-            });
-
-            $('.bx-controls-direction a').wrap('<div class="white"></div>');
-        });
-    </script>
 </head>
 
 <body>
@@ -61,7 +43,8 @@
                     <li><a href="../movie/recently.html">영화</a></li>
                     <li><a href="../cinema/c_finder.html">영화관</a></li>
                     <li><a href="">이벤트</a></li>
-                    <li class="all_Menu"><a href="#sitemap"><img src="../asset/images/common/icon_menu.gif" alt="전체메뉴보기"></a></li>
+                    <li class="all_Menu"><a href="#sitemap"><img src="../asset/images/common/icon_menu.gif"
+                                alt="전체메뉴보기"></a></li>
                 </ul>
             </nav>
         </div>
@@ -206,8 +189,10 @@
                     <span>애니메이션, 모험, 코미디, 가족, 판타지, 뮤지컬</span>
                     <h4>겨울왕국 2</h4>
                     <p class="mv_italic">내 마법의 힘은 어디서 왔을까? <br>나를 부르는 저 목소리는 누구지?</p>
-                    <p>어느 날 부턴가 의문의 목소리가 엘사를 부르고, 평화로운 아렌델 왕국을 위협한다. <br>트롤은 모든 것은 과거에서 시작되었음을 알려주며 엘사의 힘의 비밀과 진실을 찾아 <br>떠나야한다고 조언한다.</p>
-                    <p>위험에 빠진 아렌델 왕국을 구해야만 하는 엘사와 안나는 숨겨진 과거의 진실을 찾아 <br>크리스토프, 올라프 그리고 스벤과 함께 위험천만한 놀라운 모험을 떠나게 된다. <br>자신의 힘을 두려워했던 엘사는 이제 이 모험을 헤쳐나가기에 자신의 힘이 충분하다고 <br>믿어야만 하는데…</p>
+                    <p>어느 날 부턴가 의문의 목소리가 엘사를 부르고, 평화로운 아렌델 왕국을 위협한다. <br>트롤은 모든 것은 과거에서 시작되었음을 알려주며 엘사의 힘의 비밀과 진실을 찾아
+                        <br>떠나야한다고 조언한다.</p>
+                    <p>위험에 빠진 아렌델 왕국을 구해야만 하는 엘사와 안나는 숨겨진 과거의 진실을 찾아 <br>크리스토프, 올라프 그리고 스벤과 함께 위험천만한 놀라운 모험을 떠나게 된다.
+                        <br>자신의 힘을 두려워했던 엘사는 이제 이 모험을 헤쳐나가기에 자신의 힘이 충분하다고 <br>믿어야만 하는데…</p>
                     <div class="mv_efc po_absol">
                         <a href="" class="boder_bx">배우 &amp; 제작진</a>
                         <a href="" class="boder_bx">리뷰</a>
@@ -216,33 +201,20 @@
                 </div>
                 <div class="mv_steel f_l po_absol">
                     <h3>영상 · 스틸컷 · 포토</h3>
-                    <div class="media_slider">
-                        <ul class="cle_both visual">
-                            <li class="">
-                                <a target="_blank" href="https://youtu.be/eSEs4B4H-EA"><img src="../asset/images/movie/frozen_steel01.jpg" alt=""></a>
-                            </li>
-                            <li class="">
-                                <img src="../asset/images/movie/frozen_steel02.jpg" alt="">
-                            </li>
-                            <li class="">
-                                <img src="../asset/images/movie/frozen_steel03.jpg" alt="">
-                            </li>
-                            <li class="">
-                                <img src="../asset/images/movie/frozen_steel04.jpg" alt="">
-                            </li>
-                            <li class="">
-                                <img src="../asset/images/movie/frozen_steel05.jpg" alt="">
-                            </li>
-                            <li class="">
-                                <img src="../asset/images/movie/frozen_steel06.jpg" alt="">
-                            </li>
-                            <li class="">
-                                <img src="../asset/images/movie/frozen_steel07.jpg" alt="">
-                            </li>
-                            <li class="">
-                                <img src="../asset/images/movie/frozen_steel08.jpg" alt="">
-                            </li>
-                        </ul>
+                    <div class="po_relat">
+                        <div class="media_slider">
+                            <ul class="cle_both visual mediSlide0">
+                                <li class="mv_play">
+                                    <a target="_blank" href="https://youtu.be/eSEs4B4H-EA" title="겨울왕국2 예고편 영상 바로가기"><img src="../asset/images/movie/frozen_steel07.jpg" alt="크리스토프의 썰매를 타고 산을 넘는 엘사와 안나"></a>
+                                </li>
+                                <li>
+                                    <img src="../asset/images/movie/frozen_steel08.jpg" alt="올라프를 품에 안고 있는 안나">
+                                </li>
+                                <li>
+                                    <img src="../asset/images/movie/frozen_steel03.jpg" alt="어린 엘사와 안나를 품에 안고 있는 엘사의 엄마인 이두나">
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -251,8 +223,11 @@
                 <div class="mv_maintxt f_l po_relat">
                     <span>드라마</span>
                     <h4>82년생 김지영</h4>
-                    <p>1982년 봄에 태어나 누군가의 딸이자 아내, 동료이자 엄마로 <br>2019년 오늘을 살아가는 &lsquo;지영&rsquo;(정유미). <br>때론 어딘가 갇힌 듯 답답하기도 하지만 남편 &lsquo;대현&rsquo;(공유)과 사랑스러운 딸, <br>그리고 자주 만나지 못해도 항상 든든한 가족들이 &lsquo;지영&rsquo;에겐 큰 힘이다.</p>
-                    <p>하지만 언젠가부터 마치 다른 사람이 된 것처럼 말하는 &lsquo;지영&rsquo;. <br>&lsquo;대현&rsquo;은 아내가 상처 입을까 두려워 그 사실을 털어놓지 못하고 <br>&lsquo;지영&rsquo;은 이런 &lsquo;대현&rsquo;에게 언제나 &ldquo;괜찮다&rdquo;라며 웃어 보이기만 하는데…</p>
+                    <p>1982년 봄에 태어나 누군가의 딸이자 아내, 동료이자 엄마로 <br>2019년 오늘을 살아가는 &lsquo;지영&rsquo;(정유미). <br>때론 어딘가 갇힌 듯
+                        답답하기도 하지만 남편 &lsquo;대현&rsquo;(공유)과 사랑스러운 딸, <br>그리고 자주 만나지 못해도 항상 든든한 가족들이 &lsquo;지영&rsquo;에겐 큰
+                        힘이다.</p>
+                    <p>하지만 언젠가부터 마치 다른 사람이 된 것처럼 말하는 &lsquo;지영&rsquo;. <br>&lsquo;대현&rsquo;은 아내가 상처 입을까 두려워 그 사실을 털어놓지
+                        못하고 <br>&lsquo;지영&rsquo;은 이런 &lsquo;대현&rsquo;에게 언제나 &ldquo;괜찮다&rdquo;라며 웃어 보이기만 하는데…</p>
                     <p>모두가 알지만 아무도 몰랐던 <br>당신과 나의 이야기</p>
                     <div class="mv_efc po_absol">
                         <a href="" class="boder_bx">배우 &amp; 제작진</a>
@@ -264,23 +239,92 @@
                     <h3>영상 · 스틸컷 · 포토</h3>
                     <div class="po_relat">
                         <div class="media_slider">
-                            <ul class="cle_both">
-                                <li class="">
-                                    <a target="_blank" href="https://youtu.be/Gz0ZeY1U4vY"><img src="../asset/images/movie/kim_steel01.jpg" alt=""></a>
+                            <ul class="cle_both visual mediSlide1">
+                                <li class="mv_play">
+                                    <a target="_blank" href="https://youtu.be/Gz0ZeY1U4vY" title="82년생 김지영 예고편 영상 바로가기"><img
+                                            src="../asset/images/movie/kim_steel01.jpg" alt="지영의 뺨을 어루만져주는 지영의 엄마"></a>
                                 </li>
-                                <li class="">
-                                    <img src="../asset/images/movie/kim_steel02.jpg" alt="">
+                                <li>
+                                    <img src="../asset/images/movie/kim_steel02.jpg" alt="쓸쓸한 분위기로 벤치에 앉아 통화하며 발로 유모차를 미는 지영">
                                 </li>
-                                <li class="">
-                                    <img src="../asset/images/movie/kim_steel03.jpg" alt="">
+                                <li>
+                                    <img src="../asset/images/movie/kim_steel03.jpg" alt="아이를 돌보고 있는 대현">
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="tabpanel" role="tabpanel" id="tabpanel3" aria-labelledby="tab3"></div>
-            <div class="tabpanel" role="tabpanel" id="tabpanel4" aria-labelledby="tab4"></div>
+            <div class="tabpanel cle_both po_relat" role="tabpanel" id="tabpanel3" aria-labelledby="tab3">
+                <img src="../asset/images/movie/liar_poster.jpg" alt="">
+                <div class="mv_maintxt f_l po_relat">
+                    <span>스릴러</span>
+                    <h4>굿 라이어</h4>
+                    <p class="mv_italic">평생을 공들인 계획, 드디어 실행에 나선다! <br>거짓말은 완벽하게, 복수는 우아하게!</p>
+                    <p>부유한 미망인 ‘베티(헬렌 미렌)’는 온라인 데이트 사이트에서 <br>‘로이(이안 맥켈런)’를 만나고, 두 사람은 서로를 의지하며 좋은 관계를 만들어나간다.</p>
+                    <p>하지만 사실 로이는 베티의 돈을 노리고 의도적으로 접근했던 것. <br>이를 모르는 베티는 로이가 제안한대로 공동 계좌를 만들어 본인의 재산과 <br>로이의 재산을 합하는 데 동의하고, 두 사람은 베를린으로 여행을 떠난다.</p>
+                    <p>그 곳에서 베티는 로이의 정체를 알게 되고 로이에게 복수를 감행하는데…</p>
+                    <div class="mv_efc po_absol">
+                        <a href="" class="boder_bx">배우 &amp; 제작진</a>
+                        <a href="" class="boder_bx">리뷰</a>
+                        <a href="" class="boder_bx">예매</a>
+                    </div>
+                </div>
+                <div class="mv_steel f_l po_absol">
+                    <h3>영상 · 스틸컷 · 포토</h3>
+                    <div class="po_relat">
+                        <div class="media_slider">
+                            <ul class="cle_both visual mediSlide2">
+                                <li class="mv_play">
+                                    <a target="_blank" href="https://youtu.be/HbhUxz4siEs" title="굿라이어 예고편 영상 바로가기"><img
+                                            src="../asset/images/movie/liar_steel01.jpg" alt="마주보고 이야기하는 로이와 베티"></a>
+                                </li>
+                                <li>
+                                    <img src="../asset/images/movie/liar_steel02.jpg" alt="로이의 머리를 손질해주는 베티">
+                                </li>
+                                <li>
+                                    <img src="../asset/images/movie/liar_steel03.jpg" alt="사람을 두고 대화하고 있는 로이와 베티">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tabpanel cle_both po_relat" role="tabpanel" id="tabpanel4" aria-labelledby="tab4">
+                <img src="../asset/images/movie/little_poster.jpg" alt="">
+                <div class="mv_maintxt f_l po_relat">
+                    <span>드라마</span>
+                    <h4>감쪽같은 그녀</h4>
+                    <p>&ldquo;초면에 실례하겠습니다~&rdquo; <br>72살 나 홀로 라이프를 즐기는 &lsquo;말순&rsquo; 할매의 인생에 듣도 보도 못한 손녀(?)가 나타났다!</p>
+                    <p>특기는 자수, 용돈 벌이는 그림 맞추기(?) <br>동네를 주름 잡으며 나 혼자 잘 살고 있던 &lsquo;말순&rsquo; 할매 앞에 다짜고짜 자신을 <br>손녀라고 소개하는 열두 살 &lsquo;공주&rsquo;가 갓난 동생 &lsquo;진주&rsquo;까지 업고 찾아온다.</p>
+                    <p>외모, 성격, 취향까지 모든 것이 극과 극인 &lsquo;말순&rsquo;과 &lsquo;공주&rsquo;는 <br>티격태격 하루도 조용할 날 없이 지내지만, 필요한 순간엔 든든한 내 편이 되어주며  <br>서로에게 특별한 존재가 되어간다. <br>하지만 &lsquo;말순&rsquo;은 시간이 갈수록 &lsquo;공주&rsquo;와의 동거생활이
+                        아득하고 깜깜하게만 느껴지는데…</p>
+                    <div class="mv_efc po_absol">
+                        <a href="" class="boder_bx">배우 &amp; 제작진</a>
+                        <a href="" class="boder_bx">리뷰</a>
+                        <a href="" class="boder_bx">예매</a>
+                    </div>
+                </div>
+                <div class="mv_steel f_l po_absol">
+                    <h3>영상 · 스틸컷 · 포토</h3>
+                    <div class="po_relat">
+                        <div class="media_slider">
+                            <ul class="cle_both visual mediSlide3">
+                                <li class="mv_play">
+                                    <a target="_blank" href="https://youtu.be/i43oWv6jWJ4" title="감쪽같은 그녀 예고편 영상 바로가기"><img
+                                            src="../asset/images/movie/little_steel01.jpg" alt="마루에 앉아 웃고 있는 말순과 공주"></a>
+                                </li>
+                                <li>
+                                    <img src="../asset/images/movie/little_steel02.jpg" alt="마루에 있는 공주와 바느질 하는 말순">
+                                </li>
+                                <li>
+                                    <img src="../asset/images/movie/little_steel03.jpg" alt="탁 트인 평상에 앉아 친구들과 화투를 치는 말순">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </article>
 
         <article id="mv_three">
@@ -294,7 +338,7 @@
         <footer id="footer">
             <div class="footerbox">
                 <h1 class="logo">
-                    <a href="">
+                    <a href="../index.html">
                         <img src="../asset/images/common/logo_footer.svg" alt="카멜레온시네마 로고">
                     </a>
                 </h1>
@@ -302,7 +346,7 @@
                     <li>이용약관</li>
                     <li>채용정보</li>
                     <li>회사소개</li>
-                    <li><a href="../notice/qna/">고객센터</a></li>
+                    <li><a href="../notice/faq.html">고객센터</a></li>
                     <li>제휴/광고/임대문의</li>
                     <li>개인정보처리방침</li>
                 </ul>

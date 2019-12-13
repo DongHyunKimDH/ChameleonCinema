@@ -24,10 +24,10 @@
 #m_ship .top_txt strong { color: #eb651e; font-family:Josefin; font-weight: 700; font-size: 24px;}
 #m_ship .top_txt p {padding-top: 26px; font-size: 16px; color: #555555; line-height: 1.63;}
 #ms_box>ul>li{margin-right: 50px;margin-bottom: 70px; width: 550px; height: 320px; float: left; }
-#ms_box>ul>li:nth-child(1){margin: none;}
+#ms_box>ul>li:nth-child(1){margin: 0;}
 #ms_box img {z-index: -100;}
 #ms_box ul li:nth-child(1) {background:url("../../asset/images/membership/teener.jpg") no-repeat;}
-#ms_box ul li:nth-child(2) {background:url("../../asset/images/membership/couple.jpg") no-repeat;}
+#ms_box ul li:nth-child(2) {background:url("../../asset/images/membership/couple.jpg") no-repeat;margin-left: 50px;}
 #ms_box ul li:nth-child(3) {background:url("../../asset/images/membership/kinder.jpg") no-repeat;}
 #ms_box ul li:nth-child(4) {background:url("../../asset/images/membership/family.jpg") no-repeat;}
 #ms_box .ms_h_txt { width: 550px; height: 320px;margin: 0 auto; text-align: center; color: #ffffff; background: rgba(0,0,0,0); -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; transition: all 0.5s; }

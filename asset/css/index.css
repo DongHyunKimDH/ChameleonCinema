@@ -45,26 +45,29 @@ div.wid1920.cnt1wrap
     /* 탭패널 */
 #movieTab .tabpanel{display: inline-block;}
 
-#tabpanel1 > div a{display: block; width: 180px; height: 40px; line-height: 36px; margin: 48px 0 38px 925px; color: #ea651e; border: 2px solid #ea651e; background: transparent url("../images/common/icon_plus.png") no-repeat 14px 50%;}
-#tabpanel1 > div a:hover, #tabpanel1 > div a:focus{color: #fff; background: #ea651e url("../images/common/icon_plus_hover.png") no-repeat 14px 50%;}
+.tabpanel > div a{display: block; width: 180px; height: 40px; line-height: 36px; margin: 48px 0 38px 925px; color: #ea651e; border: 2px solid #ea651e; background: transparent url("../images/common/icon_plus.png") no-repeat 14px 50%;}
+.tabpanel > div a:hover, .tabpanel > div a:focus{color: #fff; background: #ea651e url("../images/common/icon_plus_hover.png") no-repeat 14px 50%;}
 
-#tabpanel1 ul li{width: 270px; height: 400px; color: #fff;}
-#tabpanel1 ul li + li{margin-left: 8px;}
+.tabpanel ul li{width: 270px; height: 400px; color: #fff;}
+.tabpanel ul li + li{margin-left: 8px;}
 
-#tabpanel1 ul li div{height: 400px; padding-top: 111px; top: 0; left: 0px; background: rgba(0,0,0,0);}
-#tabpanel1 ul li div:hover, #tabpanel1 ul li div.on{background: rgba(0,0,0,0.6);}
-#tabpanel1 ul li div strong{display: block; font-size: 30px; font-weight: 500;}
-#tabpanel1 ul li div p{font-size: 13px; font-weight: 100;}
-#tabpanel1 ul li div a{display: inline-block; width: 180px; height: 40px; line-height: 36px; border: 2px solid #fff; font-weight: 100; font-size: 18px;}
-#tabpanel1 ul li div a:nth-child(3){margin-top: 57px;}
-#tabpanel1 ul li div a:hover, #tabpanel1 ul li div a:focus, #tabpanel1 ul li.on div a{color: #333; font-weight: 400; background: #fff;}
-#tabpanel1 ul li div a + a{margin-top: 15px;}
+.tabpanel ul li div{height: 400px; padding-top: 111px; top: 0; left: 0px; background: rgba(0,0,0,0);}
+.tabpanel ul li div:hover, .tabpanel ul li div.on{background: rgba(0,0,0,0.6);}
+.tabpanel ul li div strong{display: block; font-size: 30px; font-weight: 500;}
+.tabpanel ul li div p{font-size: 13px; font-weight: 100;}
+.tabpanel ul li div a{display: inline-block; width: 180px; height: 40px; line-height: 36px; border: 2px solid #fff; font-weight: 100; font-size: 18px;}
+.tabpanel ul li div a:nth-child(3){margin-top: 57px;}
+.tabpanel ul li div a:hover, .tabpanel ul li div a:focus, .tabpanel ul li.on div a{color: #333; font-weight: 400; background: #fff;}
+.tabpanel ul li div a + a{margin-top: 15px;}
 
-#tabpanel1 ul li div strong, #tabpanel1 ul li div p, #tabpanel1 ul li div a{-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'; opacity: 0;}
-#tabpanel1 ul li:hover div strong, #tabpanel1 ul li:hover div p, #tabpanel1 ul li:hover div a, #tabpanel1 ul li.on div strong, #tabpanel1 ul li.on div p, #tabpanel1 ul li.on div a{-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)'; opacity: 1;}
+.tabpanel ul li div strong, .tabpanel ul li div p, .tabpanel ul li div a{-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)'; opacity: 0;}
+.tabpanel ul li:hover div strong, .tabpanel ul li:hover div p, .tabpanel ul li:hover div a, .tabpanel ul li.on div strong, .tabpanel ul li.on div p, .tabpanel ul li.on div a{-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)'; opacity: 1;}
 
     /* transition */
-.tablist li:hover, .tablist li:focus, .tablist li.active, #tabpanel1 ul li div, #tabpanel1 ul li div strong, #tabpanel1 ul li div p, #tabpanel1 ul li div a, .tablist li:after, #tabpanel1 > div a{-webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; transition: all 0.5s;}
+.tablist li:hover, .tablist li:focus, .tablist li.active, .tabpanel ul li div, .tabpanel ul li div strong, .tabpanel ul li div p, .tabpanel ul li div a, .tablist li:after, .tabpanel > div a{-webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; transition: all 0.5s;}
+
+#movieTab .tabpanel{display: none;}
+#movieTab .tabpanel.active{display: inline-block;}
 /* content2 css 종료 */
 
 /* content3 css 시작 */

@@ -469,10 +469,6 @@ input[type="file"]
     height : 100px;
     cursor : pointer;
 }
-#cinemaTab .tablist li + li
-{
-    /* border-left : 1px solid #ccc; */
-}
 #cinemaTab .tablist li:hover,
 #cinemaTab .tablist li:focus
 {
@@ -550,7 +546,6 @@ input[type="file"]
     height : 40px;
     line-height : 38px;
     text-align : center;
-
 }
 #opaBox .opaTxt a:last-child
 {
@@ -579,10 +574,6 @@ input[type="file"]
 .timeTable .printDate
 {
     padding-left : 56px;
-}
-.timeTable .printDate > button:nth-child(1)
-{
-    /* padding-right : 30px; */
 }
 .timeTable .printDate .pDate
 {
@@ -617,11 +608,6 @@ input[type="file"]
 {
     vertical-align : middle;
 }
-.timeTable #calendar tr td
-{
-    cursor : pointer;
-}
-
 .mvListArea
 {
     height : 415px;
@@ -696,7 +682,7 @@ input[type="file"]
 }
 .mvListArea .mvTime ul li+li
 {
-    margin-left : 60px;
+    padding-left : 60px;
 }
 .mvListArea .mvTime ul li a
 {
@@ -714,7 +700,7 @@ input[type="file"]
     font-size : 20px;
 }
 
-.minimap
+#minimap
 {
     display : none;
     margin-left : 40px;
@@ -724,7 +710,7 @@ input[type="file"]
     font-size : 26px;
     font-weight : 400;
 }
-.minimap:after
+#minimap:after
 {
     position : absolute;
     content : "";
@@ -739,23 +725,23 @@ input[type="file"]
     box-sizing: border-box;
 
 }
-.minimap h4
+#minimap h4
 {
     padding : 7px 0px;
     border-bottom : 1px solid #aaa;
     margin-bottom : 14px;
 }
-.minimap strong
+#minimap strong
 {
     display : block;
 }
-.minimap strong:last-child
+#minimap strong:last-child
 {
     padding : 14px 0px;
     border-top : 1px solid #aaa;
     margin-top : 20px;
 }
-.minimap .seat
+#minimap .seat
 {
     margin-top : 14px;
     padding : 0px 7px;
@@ -763,7 +749,7 @@ input[type="file"]
     height : 190px;
     text-align : center;
 }
-.minimap .seat .selSeat
+#minimap .seat .selSeat
 {
     float : left;
     width : 15px;
@@ -772,33 +758,21 @@ input[type="file"]
     margin-bottom : 4px;
     margin-left : 4px;
 }
-.minimap .seat .selSeat:nth-child(1),
-.minimap .seat .selSeat:nth-child(13),
-.minimap .seat .selSeat:nth-child(25),
-.minimap .seat .selSeat:nth-child(37),
-.minimap .seat .selSeat:nth-child(49),
-.minimap .seat .selSeat:nth-child(61),
-.minimap .seat .selSeat:nth-child(73),
-.minimap .seat .selSeat:nth-child(85),
-.minimap .seat .selSeat:nth-child(97),
-.minimap .seat .selSeat:nth-child(109)
+#minimap .seat .selSeat:nth-child(1),
+#minimap .seat .selSeat:nth-child(13),
+#minimap .seat .selSeat:nth-child(25),
+#minimap .seat .selSeat:nth-child(37),
+#minimap .seat .selSeat:nth-child(49),
+#minimap .seat .selSeat:nth-child(61),
+#minimap .seat .selSeat:nth-child(73),
+#minimap .seat .selSeat:nth-child(85),
+#minimap .seat .selSeat:nth-child(97),
+#minimap .seat .selSeat:nth-child(109)
 {
     margin-left : 0px;
 }
-.minimap .seat .scol
+#minimap .seat .scol
 {
     background : #fff;
 }
-
-/* 추가 및 수정 */
-#timeTable .mvListArea .mvTime ul li{
-    position: relative;
-}
-#timeTable .mvListArea .mvTime ul li a + .minimap
-{
-    position: absolute;bottom: 64px;left: -125px;
-}
-/* .mvListArea .mvTime ul li+li => padding-left에서 margin-left : 60px;로 변경함 */
-
-
 /* c_finder 종료 */

@@ -5,12 +5,14 @@ $(document).ready(function()
     var today = new Date();
     var date = new Date();
     var pday = ["일", "월", "화", "수", "목", "금", "토"];
-    var chkNumber = 0;
+    
     var pmon = today.getMonth()+1;
     var pdate = today.getDate();
     var todayDate = new Date(today.getFullYear(),today.getMonth()+1,today.getDate())
     var compareDate = new Date(date.getFullYear(),date.getMonth()+1,date.getDate());
-    var cliMon = 0, cliDate = 0;
+    
+
+
     function prevCalendar() 
     {
     // 이전 달을 today에 값을 저장하고 달력에 today를 넣어줌
@@ -73,47 +75,13 @@ $(document).ready(function()
          }
     }
 
-
     $("#timeTable .printDate .pDate").text(pmon+"월 "+pdate+"일 ");
+
     var lastDate = new Date(today.getFullYear(),today.getMonth()+1,0);
-
-
-    $(document).on('click', '#calendar tr td button', function () 
-    {
-        cliDate = parseInt($(this).text());
-        cliMon = today.getMonth()+1;
-        $("#timeTable .printDate .pDate").text(cliMon+"월 "+cliDate+"일 ");
-    });
-    //다음버튼
-    $("#timeTable .printDate button").eq(2).on("click", function()
-    {   
-        chkNumber++;
-        pdate++;
-        if(pdate > lastDate.getDate())
-        {
-            pdate=1;
-            pmon++;
-            
-            if(pmon > 12)
-            pmon=1; 
-        }
-
-        $("#timeTable .printDate .pDate").text(pmon+"월 "+pdate+"일 ");
-        $(".pDate").prev().attr("disabled",false);
-    });
     // 이전버튼
     $("#timeTable .printDate button").eq(1).on("click",function()
     {
-        if(chkNumber==0)
-        {
-            $(this).attr("disabled",true);
-        }
-        else
-        {
-            pdate--;
-            chkNumber--;
-        }
-        
+        pdate--;
         if(pdate == 0)
         {
             pmon--;
@@ -121,16 +89,32 @@ $(document).ready(function()
             pmon=12;
             pdate=lastDate.getDate();
         }
-        
+        $("#timeTable .printDate .pDate").text(pmon+"월 "+pdate+"일 ");
+    });
+
+    //다음버튼
+    $("#timeTable .printDate button").eq(2).on("click", function()
+    {   
+    
+        pdate++;
+        pday[date.getDay()+1];
+        if(pdate > lastDate.getDate())
+        {
+            pdate=1;
+            pmon++;
+            
+            if(pmon > 12)
+            pmon=1;
+            
+        }
         $("#timeTable .printDate .pDate").text(pmon+"월 "+pdate+"일 ");
     });
     
-
-
     var _printCal = $(".timeTable .printDate button").eq(0);
     var _prevM = $("#calendar thead tr th").eq(0).children("button");
     var _nextM = $("#calendar thead tr th").eq(2).children("button");
-    var _clickTd = $("#calendar tr td button");
+    var _clickTd = $("#calendar tr td").children("button");
+    // var _clickTd = $("#calendar tr td button");
     _printCal.on("click",function()
     {
         buildCalendar();
@@ -151,12 +135,12 @@ $(document).ready(function()
         nextCalendar();
         return false;
     });
-
-    /* 동적생성된 되어진 태그에 이벤트를 주는 방식은 조금 다릅니다
-    $(document).on('이벤트명', '선택자', function() {});
-    그리고 오늘 이전은 캘린더 이전버튼이 동작되지 못하게 추가해 주세요 */
-
-
+    _clickTd.on("click",function()
+    {
+        alert();
+        
+    });
+    
     // Calendar 종료
 
     function minimap()
@@ -173,21 +157,19 @@ $(document).ready(function()
         for(var k=0; k<24; k++)
         {
             var rand = [Math.floor(Math.random()*120)+1];
-            $(".minimap #pSe .selSeat").eq(rand).addClass("scol");
+            $("#minimap #pSe .selSeat").eq(rand).addClass("scol");
         }
     }
     minimap();
-
     var _timeList = $("#timeTable .mvListArea .mvTime ul li a");
     _timeList.on("click", function()
     {
-        var showMap = $(".minimap").clone();
-        $(this).after(showMap).next().show();
-        $(this).parent().on("mouseleave",function()
+        var showMap = $(".minMap").clone();
+        $(this).parent().appendTo(showMap);
+        /* $(this).on("mouseleave",function()
         {
-            $(this).find('.minimap').remove();
-        });
+            //$(this).next().remove();
+        }); */
         return false;
     });
- 
 });
