@@ -1,0 +1,801 @@
+@charset "utf-8";
+
+
+
+.bgPositionY
+{
+    background-position-y : -100px !important;
+}
+button
+{
+    text-align : left;
+    color : inherit;
+    font-weight : inherit;
+}
+input[type="file"]
+{
+    background : none;
+}
+
+/* FAQ 시작 */
+#subpage_content
+{
+    padding-top : 106px;
+}
+#location_bar
+{
+    padding : 20px 0px 0px 20px;
+}
+#location_bar img
+{
+    vertical-align : middle;
+}
+#location_bar a:hover img,
+#location_bar a:focus img
+{
+    border-bottom : 1px solid #333;
+}
+
+#location_bar + h2.txt_cen
+{
+    height : 80px;
+    line-height : 80px;
+    font-size : 30px;
+    padding : 80px 0px;
+}
+#faq #iconBox
+{
+    height : 240px;
+    margin-bottom : 148px;
+}
+#faq #iconBox li
+{
+    position : relative;
+    width : 240px;
+    float : left;
+    box-shadow: 0px 2px 6px 0 rgba(0, 0, 0, 0.15);
+}
+#faq #iconBox li a
+{
+    display : block;
+    width : 240px;
+    height : 240px;
+}
+#faq #iconBox li a .iconArea
+{
+    position : relative;
+    display : inline-block;
+    margin : 50px 70px 0px;
+    width : 100px;
+    height : 100px;
+    box-sizing : border-box;
+    background : url("../../asset/images/notice/notice_sp.png") no-repeat;
+}
+#faq #iconBox li:nth-child(1) a .iconArea
+{
+    background-position-x : 0px;
+    background-position-y : 0px;
+}
+#faq #iconBox li:nth-child(2) a .iconArea
+{
+    background-position-x : -100px;
+}
+#faq #iconBox li:nth-child(3) a .iconArea
+{
+    background-position-x : -200px;
+}
+#faq #iconBox li:nth-child(4) a .iconArea
+{
+    background-position-x : -300px;
+}
+#faq #iconBox li:nth-child(5) a .iconArea
+{
+    background-position-x : -400px;
+}
+
+#faq #iconBox li:nth-child(1):hover a .iconArea,
+#faq #iconBox li:nth-child(1) a:focus .iconArea
+{
+    background-position : 0px -100px;
+}
+#faq #iconBox li:nth-child(2):hover a .iconArea,
+#faq #iconBox li:nth-child(2) a:focus .iconArea
+{
+    background-position : -100px -100px;
+}
+#faq #iconBox li:nth-child(3):hover a .iconArea,
+#faq #iconBox li:nth-child(3) a:focus .iconArea
+{
+    background-position : -200px -100px;
+}
+#faq #iconBox li:nth-child(4):hover a .iconArea,
+#faq #iconBox li:nth-child(4) a:focus .iconArea
+{
+    background-position : -300px -100px;
+}
+#faq #iconBox li:nth-child(5):hover a .iconArea,
+#faq #iconBox li:nth-child(5) a:focus .iconArea
+{
+    background-position : -400px -100px;
+}
+#faq #iconBox li a p
+{
+    position : relative;
+    top : 40px;
+    font-size : 24px;
+}
+#faq #iconBox li:hover a p,
+#faq #iconBox li a:focus p
+{
+    color : #eb651e;
+}
+#searchWrap
+{
+    text-align: right;
+    padding : 0px 30px 37px 0px;
+    border-bottom : 1px solid #eee;
+}
+#searchSelect
+{
+    margin-right : 20px;
+}
+#searchWrap button
+{
+    width : 25px;
+    height : 25px;
+    right :32px;
+    top : 1.5px;
+}
+
+
+#boardArea
+{
+    width : 1200px;
+}
+#boardHead
+{
+    height : 49px;
+    line-height : 49px;
+    border-bottom : 1px solid #eee;
+}
+.boardList
+{
+    width : 100%;
+}
+#boardArea .boardList > a
+{
+    display : block;
+    width : 1200px;
+    height : 49px;
+    border-bottom : 1px solid #eee;
+}
+#boardArea .boardList > a:hover .boardHead3
+{
+    color : #eb651e;
+}
+#boardArea .boardList .detail
+{
+    height : 0px;
+    overflow : hidden;
+    padding-left : 390px;
+    transition : all 0.5s;
+    background : #eee;
+}
+#boardArea .boardList .detail.detailVisible
+{
+    height : auto;
+    padding : 50px 0px 50px 390px;
+}
+#boardArea .boardList a > span
+{
+    padding : 10px 0px;
+}
+#boardArea .boardHead1
+{
+    display : inline-block;
+    width : 130px;
+    text-align : center;
+}
+#boardArea .boardHead2
+{
+    display : inline-block;
+    width : 250px;
+}
+#boardArea .boardHead3
+{
+    display : inline-block;
+    width : 800px;
+}
+
+
+#buttonSet
+{
+    margin : 80px auto;
+    width : 500px;
+    height : 80px;
+}
+#buttonSet .pageButton
+{
+    float : left;
+    width : 50px;
+    height : 50px;
+    line-height : 50px;
+    font-size : 18px;
+    border : 1px solid #eee;
+    -webkit-box-sizing : border-box;
+    -moz-box-sizing : border-box;
+    box-sizing : border-box;
+}
+#buttonSet .pageButton+.pageButton
+{
+    margin-left : 15px;
+}
+#buttonSet .pageButton img
+{
+    vertical-align : middle;
+}
+#buttonSet .pageButton a
+{
+    display : block;
+    width : 50px;
+    height : 50px;
+}
+#buttonSet .pageButton a:hover,
+#buttonSet .pageButton a:focus
+{
+    color : #eb651e;
+}
+/* FAQ 종료 */
+
+/* question 시작 */
+.questionTxt
+{
+    font-size : 20px;
+    line-height : 60px;
+    margin-bottom : -40px;
+    padding-left : 42px;
+}
+.questionTxt p + p
+{
+    margin-bottom : 80px;
+}
+.questionTxt strong
+{
+    display : block;
+    font-weight : 500;
+    margin-bottom : 46px;
+}
+#agreementTxt
+{
+    width : 1198px;
+    height : 469px;
+    border : 1px solid #aaa;
+    margin-bottom : 30px;
+}
+#agreementTxt p
+{
+    font-size : 20px;
+    line-height : 30px;
+    letter-spacing : -0.4px;
+    padding : 49px 0px 43px 38px;
+}
+.questionTxt2
+{
+    font-size : 20px;
+    line-height : 30px;
+    padding-left : 42px;
+    margin-bottom : 100px;
+}
+.questionTxt2 #radioWrap
+{
+    right : 23px;
+    top : 0px;
+}
+
+
+#quesForm
+{
+    width : 1200px;
+    font-size : 20px;
+    margin-bottom : 80px;
+}
+#quesForm tr
+{
+    border-top : 1px solid #eee;
+    height : 50px;
+}
+.wid140
+{
+    width : 140px;
+}
+.wid410
+{
+    width : 410px;
+}
+.wid310
+{
+    width : 310px;
+}
+#quesForm input[type="text"]
+{
+    background : #f1f1f1;
+}
+#quesForm button
+{
+    font-family : inherit;
+    font-size : 20px;
+    font-weight : 500;
+}
+#quesForm #name
+{
+    width : 130px;
+}
+#quesForm #quesTel + td > input[type="text"]
+{
+    width : 60px;
+}
+#quesForm #etc + label
+{
+    margin-right : 200px;
+}
+#quesForm .selAreaWrap
+{
+    display : inline-block;
+}
+#quesForm .selAreaWrap:last-child
+{
+    margin-left : 50px;
+}
+#quesForm .selAreaWrap > button,
+#quesForm .quesType > button
+{
+    width : 140px;
+    height : 40px;
+    line-height : 38px;
+    border : 1px solid #333;
+    padding-left : 12px;
+}
+#quesForm .selAreaWrap > button:hover,
+#quesForm .selAreaWrap > button:focus,
+#quesForm .quesType > button:hover,
+#quesForm .quesType > button:focus
+{
+    -webkit-border-radius : 8px;
+    -moz-border-radius : 8px;
+    border-radius : 8px;
+}
+#quesForm .selAreaWrap .selArea,
+#quesForm .selAreaWrap .selCinema,
+#quesForm .quesType .selType
+{
+    display : none;
+}
+#quesForm .selAreaWrap li,
+#quesForm .quesType .selType li
+{
+    padding-left : 20px;
+    background : #fff;
+    border-bottom : 1px solid #eee;
+    width : 140px;
+    height : 40px;
+    line-height : 38px;
+    -webkit-box-sizing : border-box;
+    -moz-box-sizing : border-box;
+    box-sizing : border-box;
+
+}
+#quesForm .selAreaWrap li button,
+#quesForm .selType li button
+{
+    width : 120px;
+}
+
+#quesForm .selAreaWrap button .triangle:after,
+#quesForm .quesType button .triangle:after
+{
+    content : "";
+    position : absolute;
+    z-index : 200;
+    right : 10px;
+    top : 16px;
+    border-top : 10px solid #aaa;
+    border-left : 8px solid transparent;
+    border-right : 8px solid transparent;
+}
+#quesForm .selAreaWrap button.active .triangle:after,
+#quesForm .quesType.active button .triangle:after
+{
+    -webkit-transform : rotate(180deg);
+    -moz-transform : rotate(180deg);
+    -o-transform : rotate(180deg);
+    -ms-transform : rotate(180deg);
+    transform : rotate(180deg);
+}
+#quesForm .quesType
+{
+    display : inline-block;
+    /* height : 40px;
+    overflow: hidden; */
+}
+#quesForm .quesType .selType li
+{
+    padding-left : 15px;
+}
+#quesForm #quesTit
+{
+    width : 100%;
+}
+#quesForm #quesTarea
+{
+    width : 100%;
+}
+#quesForm input[type="submit"]
+{
+    width : 100px;
+    color : #fff;
+    background : #eb651e;
+}
+/* transition */
+#quesForm .selAreaWrap > button,
+#quesForm .quesType > button,
+#quesForm .selAreaWrap button .triangle:after,
+#quesForm .quesType button .triangle:after
+{
+    -webkit-transition : all 0.5s;
+    -moz-transition : all 0.5s;
+    -o-transition : all 0.5s;
+    transition : all 0.5s;
+}
+
+/* question 종료 */
+
+/* c_finder 시작 */
+#cinemaTab .tablist
+{
+    width : 100%;
+    height : 100px;
+    line-height : 98px;
+    padding : 0px 119px;
+    text-align : center;
+    font-size : 20px;
+    border-top : 1px solid #ccc;
+    border-bottom : 1px solid #ccc;
+    margin-bottom : 70px;
+}
+#cinemaTab .tablist li
+{
+    float : left;
+    width : 137px;
+    height : 100px;
+    cursor : pointer;
+}
+#cinemaTab .tablist li + li
+{
+    /* border-left : 1px solid #ccc; */
+}
+#cinemaTab .tablist li:hover,
+#cinemaTab .tablist li:focus
+{
+    color : #eb651e;
+    font-weight : 600;
+}
+#cinemaTab .tabpanel
+{
+    height : 230px;
+    margin-bottom : 70px;
+}
+#cinemaTab .tabpanel ul
+{
+    height : 30px;
+    line-height : 30px;
+    font-size : 18px;
+    padding : 0px 119px 70px;
+    text-align : center;
+}
+#cinemaTab .tabpanel ul:last-child
+{
+    padding-bottom : 0px;
+}
+#cinemaTab .tabpanel ul li
+{
+    float : left;
+    width : 137px;
+}
+#cinemaTab .tabpanel ul li a:hover,
+#cinemaTab .tabpanel ul li a:focus,
+#cinemaTab .tab.active
+{
+    color : #eb651e;
+}
+
+#cinemaTab .tabpanel
+{
+    display :none;
+}
+#cinemaTab .tabpanel.active
+{
+    display :block;
+}
+
+
+#c_finder_cnt2
+{
+    margin-bottom : 70px;
+}
+#c_finder_cnt2 .cnt2
+{
+    height : 975px;
+    background : url("../images/cinema/cinema1.png") no-repeat center top;
+}
+#c_finder_cnt2 .cnt2 #opaBox
+{
+    position : absolute;
+    left : 0px;
+    bottom : 0px;
+    width : 100%;
+    height : 250px;
+    background : rgba(0,0,0,0.5);
+    font-size : 40px;
+    color : #fff;
+}
+#opaBox .opaTxt
+{
+    padding : 50px 0px 50px 26px;
+}
+#opaBox .opaTxt a
+{
+    display : inline-block;
+    font-size : 20px;
+    width : 180px;
+    height : 40px;
+    line-height : 38px;
+    text-align : center;
+
+}
+#opaBox .opaTxt a:last-child
+{
+    margin-left : 30px;
+}
+#opaBox .opaTxt a:hover,
+#opaBox .opaTxt a:focus
+{
+    border : 1px solid #fff;
+    border-radius : 4px;
+}
+#opaBox .opaTxt a
+{
+    transition : all 0.5s;
+}
+
+.timeTable h2
+{
+    padding-bottom : 80px;
+}
+.timeTable .printDate button img,
+.timeTable .printDate span,
+.timeTable .printDate .pDate > *
+{
+    vertical-align : middle;
+}
+.timeTable .printDate
+{
+    padding-left : 56px;
+}
+.timeTable .printDate > button:nth-child(1)
+{
+    /* padding-right : 30px; */
+}
+.timeTable .printDate .pDate
+{
+    width : 200px;
+    font-size : 30px;
+    padding : 0px 15px;
+}
+.timeTable .printDate button:nth-child(2),
+.timeTable .printDate button:nth-child(3)
+{
+    width : 50px;
+    height : 50px;
+}
+.timeTable #calendar
+{
+    display :none;
+    z-index : 500;
+    width : 200px;
+    text-align : center;
+    top : -224px;
+}
+.timeTable #calendar tr
+{
+    background : rgb(249, 249, 249);
+}
+.timeTable #calendar thead tr:first-child
+{
+    height: 50px;
+}
+.timeTable #calendar tr th,
+.timeTable #calendar tr th img
+{
+    vertical-align : middle;
+}
+.timeTable #calendar tr td
+{
+    cursor : pointer;
+}
+
+.mvListArea
+{
+    height : 415px;
+    border-top : 1px solid #ddd; 
+    border-bottom : 1px solid #ddd;
+}
+.mvListArea > div
+{
+    float : left;
+}
+.mvListArea .mvInfo
+{
+    width : 442px;
+    height : 417px;
+    padding : 84px 0px 0px 52px;
+}
+.mvListArea .mvInfo > *
+{
+    vertical-align: middle;
+}
+.mvListArea .mvInfo img
+{
+    vertical-align : middle;
+}
+.mvListArea .mvInfo > h3
+{
+    font-weight : 500;
+    height : 50px;
+    line-height : 50px;
+}
+.mvListArea .mvInfo h3
+{
+    display : inline-block;
+    padding-left : 30px;
+    width : 150px;
+    font-size : 20px;
+}
+.mvListArea .mvInfo div
+{
+    display : inline-block;
+    height : 50px;
+    width : 80px;
+    text-align : center;
+}
+.mvListArea .mvInfo div p
+{
+    font-size : 20px;
+    height : 30px;
+}
+.mvListArea .mvTime
+{
+    width : 758px;
+    height : 417px;
+    padding : 80px 29px 96px 36px;
+}
+.mvListArea .mvTime ul
+{
+    height : 78px;
+    text-align : center;
+}
+.mvListArea .mvTime ul+ul
+{
+    padding-top : 67px;
+}
+.mvListArea .mvTime ul li
+{
+    float : left;
+}
+.mvListArea .mvTime ul li+li
+{
+    margin-left : 60px;
+}
+.mvListArea .mvTime ul li a
+{
+    display : block;
+    width : 78px;
+}
+.mvListArea .mvTime ul li a:hover,
+.mvListArea .mvTime ul li a:focus
+{
+    color : #eb651e;
+}
+.mvListArea .mvTime ul li a span
+{
+    display : block;
+    font-size : 20px;
+}
+
+.minimap
+{
+    display : none;
+    margin-left : 40px;
+    background: #e1e1e1;
+    width : 238px;
+    height : 383px;
+    font-size : 26px;
+    font-weight : 400;
+}
+.minimap:after
+{
+    position : absolute;
+    content : "";
+    left : 50%;
+    margin-left : -5px;
+    bottom : -15px;
+    width : 15px;
+    height : 8px;
+    border-top : 15px solid #e1e1e1;
+    border-left : 8px solid transparent;
+    border-right : 8px solid transparent;
+    box-sizing: border-box;
+
+}
+.minimap h4
+{
+    padding : 7px 0px;
+    border-bottom : 1px solid #aaa;
+    margin-bottom : 14px;
+}
+.minimap strong
+{
+    display : block;
+}
+.minimap strong:last-child
+{
+    padding : 14px 0px;
+    border-top : 1px solid #aaa;
+    margin-top : 20px;
+}
+.minimap .seat
+{
+    margin-top : 14px;
+    padding : 0px 7px;
+    width : 228px;
+    height : 190px;
+    text-align : center;
+}
+.minimap .seat .selSeat
+{
+    float : left;
+    width : 15px;
+    height : 15px;
+    background : #333;
+    margin-bottom : 4px;
+    margin-left : 4px;
+}
+.minimap .seat .selSeat:nth-child(1),
+.minimap .seat .selSeat:nth-child(13),
+.minimap .seat .selSeat:nth-child(25),
+.minimap .seat .selSeat:nth-child(37),
+.minimap .seat .selSeat:nth-child(49),
+.minimap .seat .selSeat:nth-child(61),
+.minimap .seat .selSeat:nth-child(73),
+.minimap .seat .selSeat:nth-child(85),
+.minimap .seat .selSeat:nth-child(97),
+.minimap .seat .selSeat:nth-child(109)
+{
+    margin-left : 0px;
+}
+.minimap .seat .scol
+{
+    background : #fff;
+}
+
+/* 추가 및 수정 */
+#timeTable .mvListArea .mvTime ul li{
+    position: relative;
+}
+#timeTable .mvListArea .mvTime ul li a + .minimap
+{
+    position: absolute;bottom: 64px;left: -125px;
+}
+/* .mvListArea .mvTime ul li+li => padding-left에서 margin-left : 60px;로 변경함 */
+
+
+/* c_finder 종료 */

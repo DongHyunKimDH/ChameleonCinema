@@ -36,6 +36,7 @@
 #join tr select{font-size: 16px; height: 32px; padding: 0 3px 2px 4.5px;}
 #join .tr5 .jo_f_w{width: 47px;}
 #join tr th{width: 130px; background: url("../images/member/icon_check.jpg") no-repeat 0 18px;}
+#join .tr4 th:nth-child(3), #join .tr5 th:nth-child(3){background-image: none;}
 #join tr th:nth-child(1){padding-left: 8px; background-position-x: 0px;}
 #join tr + tr th:nth-child(3){padding-left: 100px; background-position-x: 90px;}
 #join .tr3 td label.jo_fz{font-size: 17px;}
@@ -45,7 +46,8 @@
 #join button:hover, #join button:focus{color: #fff; background: #eb641e;}
 #join tr td button{padding: 4px 13px; font-family: inherit; font-size: 14px; font-weight: 500;}
 #join_main .join_member th button{width: 140px; height: 50px; font-size: 23px; font-weight: 700; color: #eb651e; border: 2px solid #eb651e; margin: 70px 20px 0;}
-#join_main .join_member th button:hover, #join_main .join_member th button:focus{color: #fff; background: #eb641e;}
+#join_main .join_member th button:last-child{border-color: #999; color: #999; font-weight: 400;}
+#join_main .join_member th button:hover, #join_main .join_member th button:focus{color: #fff; background: #eb641e; border-color: #eb651e; font-weight: 700;}
 
 /* join opacity, transition */
 #join button, #join_main .join_member th button{-webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; transition: all 0.5s;}

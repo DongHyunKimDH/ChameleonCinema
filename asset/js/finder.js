@@ -16,7 +16,8 @@ $(document).ready(function()
     // 이전 달을 today에 값을 저장하고 달력에 today를 넣어줌
     //today.getFullYear() 현재 년도//today.getMonth() 월  //today.getDate() 일 
     //getMonth()는 현재 달을 받아 오므로 이전달을 출력하려면 -1을 해줘야함
-     today = new Date(today.getFullYear(), today.getMonth() - 1, today.getDate());
+     
+    today = new Date(today.getFullYear(), today.getMonth() - 1, today.getDate());
      buildCalendar(); //달력 cell 만들어 출력 
     }
     function nextCalendar() 
@@ -73,22 +74,36 @@ $(document).ready(function()
          }
     }
 
-
-    $("#timeTable .printDate .pDate").text(pmon+"월 "+pdate+"일 ");
+    // <,  > 사이 텍스트 오늘날짜로 변경
+    $("#timeTable .printDate .pDate .mon").text(pmon);
+    $("#timeTable .printDate .pDate .day").text(pdate);
     var lastDate = new Date(today.getFullYear(),today.getMonth()+1,0);
-
-
+    // 달력 td 클릭시 이벤트 발생
     $(document).on('click', '#calendar tr td button', function () 
     {
+        var pCal = $(".timeTable .printDate button").eq(0)
+        $(this).closest(".timeTable").find(".printDate button").eq(0).toggleClass("active");
+        if(pCal.hasClass("active"))
+            $("#calendar").show();
+        else
+            $("#calendar").hide();
+
         cliDate = parseInt($(this).text());
         cliMon = today.getMonth()+1;
-        $("#timeTable .printDate .pDate").text(cliMon+"월 "+cliDate+"일 ");
+        $("#timeTable .printDate .pDate .mon").text(cliMon);
+        $("#timeTable .printDate .pDate .day").text(cliDate);
+        // lastDate = cliDate;
+        // alert(lastDate);
     });
     //다음버튼
     $("#timeTable .printDate button").eq(2).on("click", function()
     {   
+        var chkday = parseInt($("#timeTable .printDate .pDate .day").text())
+        if(pdate != chkday) pdate = chkday;
+
         chkNumber++;
         pdate++;
+
         if(pdate > lastDate.getDate())
         {
             pdate=1;
@@ -98,12 +113,18 @@ $(document).ready(function()
             pmon=1; 
         }
 
-        $("#timeTable .printDate .pDate").text(pmon+"월 "+pdate+"일 ");
-        $(".pDate").prev().attr("disabled",false);
+        // $("#timeTable .printDate .pDate").text(pmon+"월 "+pdate+"일 ");
+        $("#timeTable .printDate .pDate .mon").text(pmon);
+        $("#timeTable .printDate .pDate .day").text(pdate);
     });
+
     // 이전버튼
+    // 막힌부분 이전버튼 클릭 chkNumber로 제어해서 문제생성되는거같음
+    // chkNumber가 0이 되었을때 ++ 해주는 구문추가(어디에?)
     $("#timeTable .printDate button").eq(1).on("click",function()
     {
+        var chkday = parseInt($("#timeTable .printDate .pDate .day").text())
+        if(pdate != chkday) pdate = chkday;
         if(chkNumber==0)
         {
             $(this).attr("disabled",true);
@@ -112,6 +133,7 @@ $(document).ready(function()
         {
             pdate--;
             chkNumber--;
+            $(this).attr("disabled",false);
         }
         
         if(pdate == 0)
@@ -122,7 +144,9 @@ $(document).ready(function()
             pdate=lastDate.getDate();
         }
         
-        $("#timeTable .printDate .pDate").text(pmon+"월 "+pdate+"일 ");
+        // $("#timeTable .printDate .pDate").text(pmon+"월 "+pdate+"일 ");
+        $("#timeTable .printDate .pDate .mon").text(pmon);
+        $("#timeTable .printDate .pDate .day").text(pdate);
     });
     
 
@@ -143,6 +167,7 @@ $(document).ready(function()
     });
     _prevM.on("click",function()
     {
+
         prevCalendar();
         return false;
     });

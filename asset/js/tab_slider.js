@@ -64,7 +64,7 @@ $(document).ready(function() {
       moveSlides: 1, 
       slideMargin: 8 
     });
-    $('.bx-controls-direction a').wrap('<div class="white"></div>');
+    //$('.bx-controls-direction a').wrap('<div class="white"></div>');
     $('.tab:first-of-type, .tabpanel:first-of-type').addClass('active').attr('tabIndex', 0);
     //의미적 표현(접근성-state) : 탭버튼 : aria-selected, 탭패널 : aria-hidden
     $('.tab:first-of-type').attr('aria-selected', true);
@@ -124,6 +124,7 @@ $(document).ready(function() {
           tabSlider3.reloadSlider();
           break;
       }
+      $('.bx-controls-direction a').wrap('<div class="white"></div>');
     });
     //첫번째 탭을 강제 클릭
     $('.tab').first().trigger('click');
